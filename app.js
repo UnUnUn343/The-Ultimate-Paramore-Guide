@@ -346,6 +346,7 @@ function render() {
   $("#foot").innerHTML = `<p>${U("photoNote")}</p><p>${U("coverNote")}</p><p>${U("footer")}</p><p>${U("disclaimer")}</p>`;
   scrollTo({ top: 0, behavior: "instant" }); // html has smooth scrolling; a new page must start at the top at once
   observe();
+  window.searchFocus && searchFocus();
   window.eraVeil && eraVeil(era, r.idx !== undefined);
 }
 

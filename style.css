@@ -486,3 +486,25 @@ a.mname:hover,a.mname:focus-visible{color:var(--accent);border-bottom-style:soli
 .merch-item .mi-h span{font:600 19px var(--display);letter-spacing:.03em}
 .merch-item p{margin:6px 0 0;max-width:68ch;line-height:1.55}
 .merch-item .mi-src{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+
+/* site search */
+.topr{display:flex;align-items:center;gap:12px}
+.sbtn{all:unset;cursor:pointer;width:34px;height:34px;display:grid;place-items:center;border:1.5px solid var(--accent);border-radius:50%;color:var(--accent);font:600 20px/1 var(--display)}
+.sbtn:hover,.sbtn:focus-visible{background:var(--accent);color:#120E16}
+#sbox{position:fixed;inset:0;z-index:9800;background:#0009;backdrop-filter:blur(3px);display:grid;justify-items:center;align-items:start;padding:7vh 12px 0}
+#sbox[hidden]{display:none}
+.sb-panel{width:min(680px,100%);max-height:80vh;display:grid;grid-template-rows:auto 1fr;background:#17121d;border:1px solid var(--accent);border-radius:14px;box-shadow:0 24px 60px #000c;overflow:hidden}
+.sb-in{display:flex;align-items:center;gap:10px;padding:12px 16px;border-bottom:1px solid var(--line)}
+.sb-in span{color:var(--accent);font-size:22px}
+.sb-in input{all:unset;flex:1;font:500 18px var(--body,inherit);color:var(--text)}
+.sb-in kbd{font:600 11px var(--display);letter-spacing:.1em;color:var(--muted);border:1px solid var(--line);border-radius:6px;padding:2px 7px}
+.sb-res{overflow:auto;padding:6px 8px 12px}
+.sb-hint{margin:14px 10px;color:var(--muted);font-size:14px}
+.sb-g h4{margin:12px 10px 4px;font:600 12px var(--display);letter-spacing:.16em;text-transform:uppercase;color:var(--accent)}
+.sb-g h4 small{color:var(--muted);font-size:11px;margin-left:6px}
+.sb-r{display:flex;gap:10px;align-items:baseline;justify-content:space-between;padding:8px 10px;border-radius:8px;color:var(--text);text-decoration:none;font-size:15px}
+.sb-r small{color:var(--muted);font-size:12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:46%}
+.sb-r em{font-style:normal;color:var(--muted)}
+.sb-r mark{background:color-mix(in srgb,var(--accent) 45%,transparent);color:inherit;border-radius:3px}
+.sb-r.on,.sb-r:hover{background:#ffffff12}
+.sflash{outline:3px solid var(--accent);outline-offset:6px;border-radius:6px;transition:outline-color .4s}
