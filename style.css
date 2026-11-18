@@ -477,3 +477,12 @@ a.mname:hover,a.mname:focus-visible{color:var(--accent);border-bottom-style:soli
 
 @media (max-width:640px){#ncard .nc-pic{height:120px}}
 
+
+/* merch page */
+.merch-list{list-style:none;margin:0;padding:0;display:grid;gap:18px}
+.merch-item{border-left:3px solid var(--accent);padding:4px 0 4px 18px}
+.merch-item .mi-h{display:flex;gap:14px;align-items:baseline;flex-wrap:wrap}
+.merch-item .mi-y{font:600 22px var(--display);color:var(--accent);letter-spacing:.05em}
+.merch-item .mi-h span{font:600 19px var(--display);letter-spacing:.03em}
+.merch-item p{margin:6px 0 0;max-width:68ch;line-height:1.55}
+.merch-item .mi-src{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}

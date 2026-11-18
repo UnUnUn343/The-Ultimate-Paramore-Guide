@@ -197,7 +197,7 @@ function homePage() {
   // era tiles show a photo from that era; Origins has none, so it gets a designed placeholder (big year over a striped field)
   const tile = e => { const ph = eraPhoto(e); return `<a class="tile reveal ${ph ? "" : "noimg"}" href="#${e.id}" style="--tc:${accentOf(e)};--cv:url('${ph ? ph.src : ""}');--cp:${ph?.pos || "center"}">${ph ? "" : `<span class="ph-big">${e.years.split(/[–-]/)[0]}</span>`}<span class="yr">${e.years}</span><b>${esc(L(e.name))}</b>${hair(e)}</a>`; };
   const person = k => { const m = MEMBERS[k], ph = realPhoto(m.photo); return `<a class="tile person reveal ${ph ? "" : "noimg"}" href="#m/${k}" style="--tc:${accentOf(ERAS.find(x => x.id === m.eras[0]))};--cv:url('${ph ? ph.src : ""}')">${ph ? "" : `<span class="ph-big mono">${esc(m.name[0])}</span><small class="ph-note">${U("noPhoto")}</small>`}<b>${esc(m.name)}</b><span class="yr">${L(m.role)}</span></a>`; };
-  const deep = [["#songs", U("songs"), SONGS.length + " " + (lang === "ua" ? "пісень" : "songs"), "#E87BAA"], ["#iceberg", U("iceberg"), ICEBERG.length + " " + (lang === "ua" ? "пунктів" : "entries"), "#9AD8F0"], ["#hair", U("hairPage"), ERAS.reduce((n, e) => n + e.hair.length, 0) + " " + (lang === "ua" ? "кольорів" : "colours"), "#E8663C"], ["#interviews", U("interviews"), INTERVIEWS.length + " " + (lang === "ua" ? "інтерв'ю" : "interviews"), "#7AC7FF"], ["#videos", U("videos"), VIDEO_INDEX.length + " " + (lang === "ua" ? "відео" : "videos"), "#FF4D4D"], ["#tours", U("tours"), EVENTS.filter(e => kindOf(e) === "tour").length + " " + (lang === "ua" ? "турів" : "tours"), "#FF9F43"], ["#events", U("events"), EVENTS.filter(e => kindOf(e) === "event").length + " " + (lang === "ua" ? "подій" : "events"), "#F5D547"], ["#bsides", U("bsides"), all_count() + " " + (lang === "ua" ? "позицій" : "entries"), "#D9A441"], ...(window.GALLERY ? [["#photos", U("photos"), GALLERY.length + " " + (lang === "ua" ? "фото" : "photos"), "#4FB3D9"]] : []), ["#web", U("web"), (INTERVIEWS.filter(i => /^Kerrang!/.test(i.outlet)).length + WEB_KERRANG.length + WEB_OFFICIAL.length + WEB_OLD.length) + " " + (lang === "ua" ? "посилань" : "links"), "#7ED6A8"], ["#sources", U("sources"), "ⓘ", "#B8B0C8"]].map(([h, t, s, c]) => `<a class="tile reveal" href="${h}" style="--tc:${c}"><span class="yr">${s}</span><b>${esc(t)}</b></a>`).join("");
+  const deep = [["#songs", U("songs"), SONGS.length + " " + (lang === "ua" ? "пісень" : "songs"), "#E87BAA"], ["#iceberg", U("iceberg"), ICEBERG.length + " " + (lang === "ua" ? "пунктів" : "entries"), "#9AD8F0"], ["#hair", U("hairPage"), ERAS.reduce((n, e) => n + e.hair.length, 0) + " " + (lang === "ua" ? "кольорів" : "colours"), "#E8663C"], ["#merch", U("merchPage"), MERCH.length + " " + (lang === "ua" ? "позицій" : "items"), "#F5A25D"], ["#interviews", U("interviews"), INTERVIEWS.length + " " + (lang === "ua" ? "інтерв'ю" : "interviews"), "#7AC7FF"], ["#videos", U("videos"), VIDEO_INDEX.length + " " + (lang === "ua" ? "відео" : "videos"), "#FF4D4D"], ["#tours", U("tours"), EVENTS.filter(e => kindOf(e) === "tour").length + " " + (lang === "ua" ? "турів" : "tours"), "#FF9F43"], ["#events", U("events"), EVENTS.filter(e => kindOf(e) === "event").length + " " + (lang === "ua" ? "подій" : "events"), "#F5D547"], ["#bsides", U("bsides"), all_count() + " " + (lang === "ua" ? "позицій" : "entries"), "#D9A441"], ...(window.GALLERY ? [["#photos", U("photos"), GALLERY.length + " " + (lang === "ua" ? "фото" : "photos"), "#4FB3D9"]] : []), ["#web", U("web"), (INTERVIEWS.filter(i => /^Kerrang!/.test(i.outlet)).length + WEB_KERRANG.length + WEB_OFFICIAL.length + WEB_OLD.length) + " " + (lang === "ua" ? "посилань" : "links"), "#7ED6A8"], ["#sources", U("sources"), "ⓘ", "#B8B0C8"]].map(([h, t, s, c]) => `<a class="tile reveal" href="${h}" style="--tc:${c}"><span class="yr">${s}</span><b>${esc(t)}</b></a>`).join("");
   return { hero, ch: [["eras", lang === "ua" ? "Епохи" : "The eras", `<div class="tiles">${ERAS.map(tile).join("")}</div>`], ["people", U("lineup"), `<div class="tiles">${Object.keys(MEMBERS).map(person).join("")}</div>`], ["dig", lang === "ua" ? "Копати глибше" : "Dig deeper", `<div class="tiles">${deep}</div>`]] };
 }
 function galleryPage() {
@@ -263,6 +263,7 @@ function route() {
   if (a === "web") return { web: true };
   if (a === "iceberg") return { iceberg: true };
   if (a === "hair") return { hair: true };
+  if (a === "merch" && window.MERCH) return { merch: true };
   if (a === "sources") return { sources: true };
   if (a === "e" && EVENTS.some(x => x.id === b)) return { event: b };
   let idx = ERAS.findIndex(e => e.id === a);
@@ -273,7 +274,9 @@ function route() {
 function render() {
   const r = route();
   let era, hero, ch, prev, next, title, songNav;
-  if (r.hair) {
+  if (r.merch) {
+    ({ hero, ch } = merchPage()); era = MERCH_ERA; title = U("merchPage");
+  } else if (r.hair) {
     ({ hero, ch } = hairPage()); era = HAIR_ERA; title = U("hairPage");
   } else if (r.sources) {
     ({ hero, ch } = sourcesPage()); era = SOURCES_ERA; title = U("sources");
@@ -320,6 +323,7 @@ function render() {
   document.querySelectorAll(".lang button").forEach(b => b.classList.toggle("on", b.dataset.lang === lang));
   $("#eras").innerHTML = ERAS.map(e => `<a href="#${e.id}" class="${!r.hair && !r.sources && !r.iceberg && !r.web && !r.interviews && !r.videos && !r.tours && !r.songs && !r.song && !r.photos && !r.home && !r.member && !r.bsides && !r.events && !r.event && e.id === era.id ? "on" : ""}" ${!r.hair && !r.sources && !r.iceberg && !r.web && !r.interviews && !r.videos && !r.tours && !r.songs && !r.song && !r.photos && !r.home && !r.member && !r.bsides && !r.events && !r.event && e.id === era.id ? 'aria-current="page"' : ""}>
     <i style="background:${accentOf(e)}"></i><b>${esc(L(e.tab))}</b><small>${e.years}</small></a>`).join("") +
+    `<a href="#merch" class="${r.merch ? "on" : ""}"><i style="background:#F5A25D"></i><b>${esc(U("merchPage"))}</b><small>${MERCH.length}</small></a>` +
     `<a href="#hair" class="${r.hair ? "on" : ""}"><i style="background:#E8663C"></i><b>${esc(U("hairPage"))}</b><small>${ERAS.reduce((n, e) => n + e.hair.length, 0)}</small></a>` +
     `<a href="#songs" class="${r.songs || r.song ? "on" : ""}"><i style="background:#E87BAA"></i><b>${esc(U("songs"))}</b><small>${SONGS.length}</small></a>` +
     `<a href="#iceberg" class="${r.iceberg ? "on" : ""}"><i style="background:#9AD8F0"></i><b>${esc(U("iceberg"))}</b><small>${ICEBERG.length}</small></a>` +
@@ -334,7 +338,7 @@ function render() {
   $("#eras .on")?.scrollIntoView({ inline: "center", block: "nearest" });
   const nav = (a, isPrev) => a ? `<a href="#${a.id}"><small>${isPrev ? U("prev") : U("next")}</small><b>${esc(L(a.name))}</b><span>${a.years}</span></a>` : "<span></span>";
   $("#era").innerHTML = hero + ch.map((c, i) => chapter(c[0], i + 1, c[1], c[2])).join("") +
-    (r.hair || r.sources || r.iceberg || r.web || r.interviews || r.videos || r.tours || r.songs || r.photos || r.home || r.bsides || r.events ? "" : r.song ? `<nav class="pn">${songNav.prev ? `<a href="#s/${songNav.prev.id}"><small>${U("prevSong")}</small><b>${esc(songNav.prev.title)}</b></a>` : "<span></span>"}${songNav.next ? `<a href="#s/${songNav.next.id}"><small>${U("nextSong")}</small><b>${esc(songNav.next.title)}</b></a>` : "<span></span>"}</nav>` : r.event ? `<nav class="pn"><a href="${kindOf(EVENTS.find(x => x.id === r.event)) === "tour" ? "#tours" : "#events"}"><small>${U("backEvents")}</small><b>${esc(U(kindOf(EVENTS.find(x => x.id === r.event)) === "tour" ? "tours" : "events"))}</b></a><span></span></nav>` : r.member ? `<nav class="pn"><a href="#${era.id}"><small>${U("back")}</small><b>${esc(L(era.name))}</b><span>${era.years}</span></a><span></span></nav>` : `<nav class="pn">${nav(prev, true)}${nav(next, false)}</nav>`);
+    (r.hair || r.merch || r.sources || r.iceberg || r.web || r.interviews || r.videos || r.tours || r.songs || r.photos || r.home || r.bsides || r.events ? "" : r.song ? `<nav class="pn">${songNav.prev ? `<a href="#s/${songNav.prev.id}"><small>${U("prevSong")}</small><b>${esc(songNav.prev.title)}</b></a>` : "<span></span>"}${songNav.next ? `<a href="#s/${songNav.next.id}"><small>${U("nextSong")}</small><b>${esc(songNav.next.title)}</b></a>` : "<span></span>"}</nav>` : r.event ? `<nav class="pn"><a href="${kindOf(EVENTS.find(x => x.id === r.event)) === "tour" ? "#tours" : "#events"}"><small>${U("backEvents")}</small><b>${esc(U(kindOf(EVENTS.find(x => x.id === r.event)) === "tour" ? "tours" : "events"))}</b></a><span></span></nav>` : r.member ? `<nav class="pn"><a href="#${era.id}"><small>${U("back")}</small><b>${esc(L(era.name))}</b><span>${era.years}</span></a><span></span></nav>` : `<nav class="pn">${nav(prev, true)}${nav(next, false)}</nav>`);
   injectMarks($("#era"));
   if (window.linkNames) linkNames($("#era"), r.member);
   if (window.gettyInit) gettyInit($("#era"));
@@ -400,7 +404,7 @@ document.addEventListener("click", e => {
   if (l) { lang = l.dataset.lang; store.set("lang", lang); const y = scrollY; render(); scrollTo({ top: y, behavior: "instant" }); }
 });
 document.addEventListener("mouseover", e => { const ac = e.target.closest(".achip"); if (ac && !ac.classList.contains("on")) ac.click(); });
-addEventListener("hashchange", () => { const a = location.hash.slice(1).split("/")[0]; if (a === "m" || a === "e" || a === "bsides" || a === "events" || a === "home" || a === "photos" || a === "songs" || a === "tours" || a === "videos" || a === "interviews" || a === "web" || a === "iceberg" || a === "hair" || a === "sources" || a === "s" || ERAS.some(e => e.id === a)) render(); });
+addEventListener("hashchange", () => { const a = location.hash.slice(1).split("/")[0]; if (a === "m" || a === "e" || a === "bsides" || a === "events" || a === "home" || a === "photos" || a === "songs" || a === "tours" || a === "videos" || a === "interviews" || a === "web" || a === "iceberg" || a === "hair" || a === "merch" || a === "sources" || a === "s" || ERAS.some(e => e.id === a)) render(); });
 render();
 
 
