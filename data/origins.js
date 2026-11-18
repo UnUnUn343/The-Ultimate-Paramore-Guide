@@ -1,0 +1,53 @@
+// Origins 2002-2004. Source: talk slides 4-6, 10, 11 (Taylor/Randall detail) + iceberg part 1.
+ERA_PAGES.origins = {
+  hero: {
+    kicker: { ua: "2002–2004 · ПОЧАТОК", en: "2002–2004 · ORIGINS" },
+    quote: { ua: "Лейбл хотів поп-зірку. Вона хотіла гурт.", en: "The label wanted a pop star. She wanted a band." },
+    stats: [{ ua: "Франклін, Теннессі", en: "Franklin, Tennessee" }, { ua: "Перший концерт: 2 травня 2004", en: "First show: 2 May 2004" }, { ua: "Контракт на 20 років", en: "A 20-year deal" }]
+  },
+  story: {
+    lead: { ua: "Гейлі була дитиною, яка почувалась чужою в новій школі, — усе інше виростає звідти.", en: "Hayley was a kid who felt like an outsider at a new school — everything else grows out of that." },
+    photos: [],
+    beats: [
+      { when: "2002", text: { ua: "У 13 років Гейлі Вільямс із мамою переїжджає з Меридіана (Міссісіпі) до Франкліна (Теннессі), і в новій школі навіть намагається говорити, як місцеві. А потім знайомиться з братами Фарро — гітаристом Джошем і барабанщиком Заком.", en: "At 13 Hayley Williams moves with her mum from Meridian, Mississippi to Franklin, Tennessee, and at the new school she even tries to talk like the locals. Then she meets the Farro brothers, guitarist Josh and drummer Zac, and Zac talks about nothing but music from day one." } },
+      { when: "2003", text: { ua: "Мама знаходить оголошення: фанк-кавер-гурту The Factory (християнському) потрібна вокалістка. На прослуховуванні Гейлі знайомиться з басистом Джеремі Девісом, а тоді ж починає брати уроки вокалу в Бретта Меннінга з Нешвілла. Гурт буквально збирається сам — через друзів і оголошення.", en: "Her mum spots an ad: the funk cover band The Factory, a Christian band, needs a singer. At the audition Hayley meets bassist Jeremy Davis, and around then she starts vocal lessons with Nashville teacher Brett Manning. The band is basically assembling itself through friends and flyers." } },
+      { when: "2003–04", text: { ua: "Потім її помічає Atlantic Records — але бачить не учасницю гурту, а сольну поп-зірку на кшталт Авріл Лавін. Гейлі водять на зустрічі, пропонують писати з професійними авторами, а пісні, які вона створила з друзями, розсилають лейблам під її іменем. Вона згадує, що почувалася так, ніби зраджує друзів.", en: "Then Atlantic Records notices her — and what they see is a solo pop star in the Avril Lavigne mould, not a member of a band. She's taken to meetings, offered co-writes with professional songwriters, and songs she wrote with her friends are sent to labels under her name alone. She remembers feeling like she was betraying them." } },
+      { when: "14–15", text: { ua: "Тож вона сперечається з лейблом і стоїть на своєму: хоче гурт. Atlantic іде на компроміс — гурт випускатиме Fueled by Ramen, емо-лейбл, що належить Atlantic, — але контракт підписує лише Гейлі. Запам'ятайте це: пізніше воно ще вдарить по всіх.", en: "So she argues it out with the label and holds her ground: she wants a band. Atlantic compromises — the band will come out through Fueled by Ramen, an emo label Atlantic owns — but the contract is signed by Hayley alone. Keep that in mind; it comes back to bite them later." } },
+      { when: { ua: "Контракт", en: "The deal" }, text: { ua: "Це «угода 360»: лейбл бере частку не лише з альбомів, а й з турів, мерчу й усього іншого — на 20 років. {{Одне з фанатських відео стверджує, що це чи не перша така угода в індустрії.}} Щоб платити одногрупникам, Гейлі створює компанію Varoom Whoa, Inc. — юридично решта учасників стають її працівниками. Це ще двічі вибухне.", en: "It's a “360 deal”: the label takes a cut not just of albums but of tours, merch and everything else, for 20 years. {{One fan video claims it was among the first deals of its kind.}} To pay her bandmates Hayley founds Varoom Whoa, Inc., which legally makes the others her employees. That will blow up twice." } },
+      { when: { ua: "2 травня 2004", en: "2 May 2004" }, text: { ua: "Перший концерт у Нешвіллі — під назвою Astrophel (з грецької приблизно «той, хто любить зорі»). Потім були Drop Dead, Gorgeous — і того ж дня гурт став Paramore. За словами Гейлі, це дівоче прізвище мами одного з перших учасників; коли дізналися, що paramour означає «таємний коханець», назва сподобалася ще більше.", en: "The first show is in Nashville under the name Astrophel — roughly “star-lover” in Greek. Then they try Drop Dead, Gorgeous, and the same day the band becomes Paramore. Hayley says it's the maiden name of an early member's mum, and when they found out “paramour” means “secret lover” they liked it even more." } },
+      { when: { ua: "Перша пісня", en: "First song" }, text: { ua: "«Conspiracy» починається з вірша на аркуші, який Гейлі приносить на репетицію, — музика в хлопців уже є. Вона пише її злою: усі думають, що в неї хитрий план кинути друзів, а насправді вона хоче «кинути» Atlantic, який не визнає гурт. Музику до пісні спершу писали для іншого вокаліста — Рендалла Томаса.", en: "“Conspiracy” starts as a poem on a sheet of paper that Hayley brings to rehearsal; the guys already have the music. She writes it angry. People think she's plotting to ditch her friends, when what she really wants is to “quit” Atlantic, which won't acknowledge the band. The music was first written for a different singer, Randall Thomas." } }
+    ]
+  },
+  lineup: {
+    members: [
+      { id: "hayley", note: { ua: "13 років, коли переїхала до Франкліна.", en: "13 when she moved to Franklin." } },
+      { id: "josh", note: { ua: "Гітара. Гейлі й Джош почали зустрічатися ще у 2004-му — таємно.", en: "Guitar. He and Hayley started dating around 2004 — in secret." } },
+      { id: "zac", note: { ua: "Барабани; на першій репетиції йому було 12.", en: "Drums; he was 12 at the first rehearsal." } },
+      { id: "jeremy", note: { ua: "Бас; у The Factory грав на п'ятиструнній.", en: "Bass; played five-string in The Factory." } },
+      { id: "jason", name: "Jason Bynum", role: { ua: "Ритм-гітара", en: "Rhythm guitar" }, note: { ua: "Сусід Гейлі. Пішов у 2006-му, його замінив Гантер Лемб.", en: "Hayley's neighbour. Left in 2006; replaced by Hunter Lamb." } }
+    ]
+  },
+  album: {
+    title: { ua: "Перші пісні", en: "The first songs" },
+    tracks: [
+      { t: "Conspiracy", key: 1, note: { ua: "Перша пісня гурту: вірш Гейлі на аркуші й музика хлопців. Вона писала її злою — насправді хотіла «кинути» Atlantic, який не визнавав гурт.", en: "The first song the band wrote: Hayley's poem on a sheet of paper, the guys' music. She wrote it angry — what she really wanted was to “quit” Atlantic, which wouldn't acknowledge the band." } },
+      { t: "Hallelujah", note: { ua: "Одна з двох нових пісень, які гурт записав для Atlantic, коли перші демо не переконали лейбл. {{За версією Джоша Фарро; інші учасники цього не підтверджували.}}", en: "One of the two new songs the band recorded for Atlantic after the first demos didn't convince the label. {{Per Josh Farro's account; the other members haven't confirmed it.}}" } },
+      { t: "Here We Go Again", note: { ua: "Друга пісня з тієї пари. Її жива кода згодом стала фанатським улюбленцем — кліпи є на сторінці пісні.", en: "The other song of that pair. Its live outro later became a fan favourite — clips are on the song page." } }
+    ]
+  },
+  watch: [
+    { id: "EzBbcfmHQvM", type: "interview", title: "Hayley Williams: The Paramore Story, in Her Own Words (Behind the Brand)", by: "Behind the Brand" },
+    { id: "dVQt-bakXsY", type: "interview", title: "Hayley Williams on growing up, the body and therapy (Mayim Bialik's Breakdown)", by: "Mayim Bialik's Breakdown" },
+    { id: "drBSeGUPxMU", type: "interview", title: "Hayley and her grandad Rusty on lost music (BBC World Service)", by: "BBC World Service" },
+    { id: "W9vIVUamzDw", type: "clip", title: "How the band got so popular — a fan-made documentary", by: "Rock N' Roll True Stories" }
+  ],
+  facts: [
+    { tag: "fact", text: { ua: "Ще до Paramore Гейлі озвучила героїню Тейлор Гадсон у християнському аудіокоміксі Mammoth City Messengers і заспівала там чотири пісні. Проєкт закрили через рік.", en: "Before Paramore Hayley voiced a character named Taylor Hudson in the Christian audio-comic Mammoth City Messengers and sang four songs. The project was shut down a year later." } },
+    { tag: "fact", text: { ua: "Тейлор Йорк грав із братами Фарро ще до знайомства з Гейлі — але батьки не відпустили його в гурт. А вокалістом мав бути хлопець на ім'я Рендалл Томас.", en: "Taylor York played with the Farro brothers before Hayley arrived — but his parents wouldn't let him join. The singer was meant to be a guy named Randall Thomas." } },
+    { tag: "fact", text: { ua: "Працівник Taco Bell порадив їм назватися «Hidden Corporate Messages». А у 2001 році вже існував інший гурт Paramore, який видав альбом накладом 100 дисків; права на назву Гейлі згодом викупила.", en: "A Taco Bell employee once suggested they call themselves “Hidden Corporate Messages”. And in 2001 another band called Paramore existed, with an album pressed in just 100 copies; Hayley later bought the rights to the name." } },
+    { tag: "fact", text: { ua: "Пісня «Stop This Song» з Riot! мала робочу назву «Avril Lavigne»: хлопці боялися порівнянь з Авріл {{За відео-айсбергом; в інших джерелах не підтверджено.}}. Авріл сама розповіла, що Гейлі написала їй листа з подякою за те, що та проклала шлях дівчатам у рок-музиці (грудень 2022).", en: "“Stop This Song” on Riot! had the working title “Avril Lavigne” because the guys feared comparisons {{Per the iceberg video; not confirmed elsewhere.}}. Avril herself said Hayley later wrote her a thank-you letter for paving the way for girls in rock (December 2022)." } },
+    { tag: "fact", text: { ua: "Paramore починалися як гурт віруючих християн. У Гейлі татуювання-хрест на нозі; на Warped Tour 2006 учасники ходили на вечірнє вивчення Біблії, і це потрапило в телерепортаж.", en: "Paramore began as a band of believing Christians. Hayley has a cross tattoo on her leg; at Warped Tour 2006 the members went to evening Bible study, which made it into a TV report." } },
+    { tag: "rumour", text: { ua: "Одна сторона: за версією Джоша, коли перші демо розкритикували, Atlantic ледь не вигнав гурт, а врятували його нові пісні «Hallelujah» і «Here We Go Again». Інші учасники цього не підтверджували. Зрештою на гурт погодилась президентка Atlantic Джулі Грінвалд.", en: "One side's story: in Josh's version, after the first demos were criticised Atlantic nearly dropped the band and the new songs “Hallelujah” and “Here We Go Again” saved it. The other members never confirmed this. In the end Atlantic president Julie Greenwald backed the band." } }
+  ]
+};
+

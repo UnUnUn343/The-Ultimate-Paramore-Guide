@@ -1,0 +1,32 @@
+// YouTube links for B-sides. official: true = Paramore / Hayley / BBC / the YouTube "- Topic" art-track channel.
+// official: false = a fan or third-party upload (verified to exist via YouTube oEmbed, not endorsed). Items with neither get a YouTube search link.
+window.BSIDE_LINKS = {
+  "Plane Crash Dream": { id: "6DDfiWRh6Zs", by: "YOUwithoutme0 (fan upload)", official: false },
+  "Breathe (Until Tomorrow)": { id: "dB5VcT_OeXg", by: "Chillapuccino (fan upload)", official: false },
+  "Stuck on You": { id: "bWT5j8qb7C0", by: "Paramore - Topic", official: true },
+  "Rewind (demo)": { id: "UtJFVSGnR1A", by: "Paramore - Topic", official: true },
+  "My Hero (electronic mix)": { id: "Kxyy8NtfBDE", by: "Paramore - Topic", official: true },
+  "Ignorance (acoustic)": { id: "q4tu84kzy7c", by: "Paramore - Topic", official: true },
+  "Tell Me It's Okay (demo)": { id: "5-da28p8B2o", by: "Paramore", official: true },
+  "Hate to See Your Heart Break (feat. Joy Williams)": { id: "QZweyIKNwX4", by: "Paramore", official: true },
+  "Live at Red Rocks": { id: "LTx2v08C_8E", by: "Paramore", official: true },
+  "Airplanes": { id: "kn6-c223DUU", by: "B.o.B", official: true },
+  "Pressure (live)": { id: "1TrG_mh4e2U", by: "fearlessmusicshow", official: false },
+  "Pressure (acoustic, live from Q101 Chicago)": { id: "Ipt1DvjNQ8o", by: "AJ Serna", official: false },
+  "Here We Go Again (live)": { id: "mjrKLybuFGM", by: "Puncturedw1ngs", official: false },
+  "Emergency (live)": { id: "1eaIgLuKiQc", by: "juan ferro", official: false },
+  "My Heart (live)": { id: "7ZIQMJrExpI", by: "ChloeHayes", official: false },
+  "Decoy": { id: "BpbGzwP1kpQ", by: "MusicDownloads0x", official: false },
+  "Temporary (demo)": { id: "KujzFkrVG1w", by: "Bloom", official: false },
+  "When It Rains (demo)": { id: "uf2NFGsiITA", by: "Em N", official: false },
+  "Misery Business (acoustic, live from Q101 Chicago)": { id: "AhFgbdHiU6g", by: "AJ Serna", official: false },
+  "For a Pessimist, I'm Pretty Optimistic (live from London)": { id: "XFhSYKjkORU", by: "Fastphotos", official: false },
+  "Born for This (live from London)": { id: "UgK6E1yqyWY", by: "AJ Serna", official: false },
+  "Where the Lines Overlap (acoustic)": { id: "HKpgPoYuxfU", by: "musicforeveryone", official: false },
+  "Brick by Boring Brick (acoustic)": { id: "q6f-DElKo2I", by: "musicforeveryone", official: false },
+  "Turn It Off (acoustic)": { id: "e6AjUWo91pY", by: "NorolineGoelighzar", official: false },
+  "Long Distance Call": { id: "b1HGEBekVhM", by: "MIGTAINA", official: false },
+  "Use Somebody": { id: "apX2JbhNDRc", by: "V Z", official: false },
+  "Love's Not a Competition (But I'm Winning)": { id: "ee_XNy8ETuI", by: "JBK 1964", official: false },
+  "Hallelujah (demo)": { id: "URSMfhnBlpI", by: "Bloom", official: false }
+};
