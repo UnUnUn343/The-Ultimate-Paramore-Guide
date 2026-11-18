@@ -11,7 +11,7 @@ Object.assign(UI, {
 });
 window.SOURCES_ERA = { id: "sources", accent: "#B8B0C8", bg: "#111016", hair: [], name: UI.sources, tab: UI.sources, years: "", font: { f: "'Oswald',Impact,sans-serif", tt: "uppercase", track: ".02em", fw: 600, h1s: 1 } };
 const SRC_LABEL = {
-  "interviews.js": { ua: "Інтерв'ю", en: "Interviews" }, "bsides.js": { ua: "Бі-сайди", en: "B-sides" }, "songs.js": { ua: "Пісні", en: "Songs" },
+  "interviews.js": { ua: "Інтерв'ю", en: "Interviews" }, "bsides.js": { ua: "Бі-сайди", en: "B-sides" }, "songs.js": { ua: "Пісні", en: "Songs" }, "songs-more.js": { ua: "Пісні", en: "Songs" },
   "events.js": { ua: "Події", en: "Events" }, "tours.js": { ua: "Тури", en: "Tours" }, "web.js": { ua: "Мережа", en: "Web" }, "eras.js": { ua: "Епохи", en: "Eras" },
   "members.js": { ua: "Учасники", en: "Members" }, "wikidata.js": { ua: "Учасники", en: "Members" }, "videos.js": { ua: "Відео", en: "Videos" }, "extras.js": { ua: "Відео", en: "Videos" }
 };
