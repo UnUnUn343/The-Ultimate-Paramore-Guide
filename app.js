@@ -69,7 +69,7 @@ const essay = e => `<a class="essay" href="${yt(e.id)}" target="_blank" rel="noo
 const chapter = (id, num, title, body) => `<section class="chapter" id="${id}" data-title="${esc(title)}">
   <header class="ch-head reveal"><span class="num">${String(num).padStart(2, "0")}</span><h2>${esc(title)}</h2></header>${body}</section>`;
 const sp = id => `<iframe title="Spotify" src="https://open.spotify.com/embed/album/${id}?utm_source=generator&theme=0" width="100%" height="352" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>`;
-const genius = t => `https://genius.com/search?q=${encodeURIComponent("Paramore " + t)}`;
+const genius = t => (window.geniusUrl && geniusUrl(t)) || `https://genius.com/search?q=${encodeURIComponent("Paramore " + t)}`;
 
 function eraChapters(era, P) {
   const ch = []; window.__usedG = new Set();
@@ -243,7 +243,7 @@ function songPage(id) {
   if (s.note) ch.push(["behind", U("behind"), `<p class="reveal">${L(s.note)}</p><p><a href="#${E.id}">${esc(L(E.name))} →</a></p>`]);
   const vids = songVideos(s), sp = P.album && [].concat(P.album.spotify || [])[0];
   if (vids.length || sp) ch.push(["watch", U("watch"), `${vids.length ? `<div class="vids">${vids.map(v => ytCard(v)).join("")}</div>` : ""}${sp ? `<div class="spot song-spot">${sp.length ? `<iframe title="Spotify" src="https://open.spotify.com/embed/album/${sp}?utm_source=generator&theme=0" width="100%" height="352" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>` : ""}</div>` : ""}<p class="muted">${U("eduNote")}</p>`]);
-  ch.push(["lyrics", U("lyricsTitle"), `<p>${U("lyricsBody")}</p><p><a class="btn" href="https://genius.com/search?q=${encodeURIComponent("Paramore " + s.title)}" target="_blank" rel="noopener">${U("readGenius")} ↗</a></p>`]);
+  ch.push(["lyrics", U("lyricsTitle"), `<p>${U("lyricsBody")}</p><p><a class="btn" href="${genius(s.title)}" target="_blank" rel="noopener">${U("readGenius")} ↗</a></p>`]);
   const sib = SONGS.filter(x => x.era === s.era && x.album === s.album), i = sib.indexOf(s);
   ch.push(["album", U("fromAlbum"), `<ol class="slist">${sib.map(x => `<li><a class="song ${x === s ? "now" : ""}" href="#s/${x.id}"><span class="n">${x.n ? String(x.n).padStart(2, "0") : "·"}</span><b>${esc(x.title)}</b></a></li>`).join("")}</ol>`]);
   return { hero, ch, theme: E, prev: sib[i - 1], next: sib[i + 1] };

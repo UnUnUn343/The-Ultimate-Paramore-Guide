@@ -9,7 +9,7 @@ Object.assign(UI, {
   filterAll: { ua: "Усе", en: "All" },
   where: { ua: "Де", en: "Where" },
   listen: { ua: "Послухати", en: "Listen" },
-  bsidesCoverage: { ua: "Тут усе, що згадано в твоїх джерелах і в тречліcтах видань з Wikipedia. Повного переліку кожного регіонального видання тут немає — це потребує бази на кшталт Discogs.", en: "This covers everything named in your sources and in Wikipedia's edition tracklists. It isn't every regional pressing — that needs a Discogs-style database." }
+  bsidesCoverage: { ua: "Тут усе, що згадано в джерелах гіда й у треклістах видань з Wikipedia. Повного переліку кожного регіонального видання тут немає — це потребує бази на кшталт Discogs.", en: "This covers everything named in this guide's sources and in Wikipedia's edition tracklists. It isn't every regional pressing — that needs a Discogs-style database." }
 });
 UI.type = Object.assign(UI.type || {}, {
   bonus: { ua: "Бонус-трек", en: "Bonus track" }, demo: { ua: "Демо", en: "Demo" }, live: { ua: "Наживо", en: "Live" },
@@ -75,7 +75,7 @@ window.BSIDES = [
     { t: "Colour Me In", type: "bonus", where: W("Released after FLOWERS for VASES", "Вийшла після FLOWERS for VASES"), yt: "Fw07dAhZH7c", note: W("Recorded days before the 2020 lockdown.", "Записана за кілька днів до карантину 2020 року.") },
     { t: "Petals for Armor I–III", type: "ep", where: W("Feb, Apr and May 2020", "Лют., квіт. та трав. 2020"), note: W("The album came out as three EPs, one day before the full release.", "Альбом вийшов трьома EP — за день до повного релізу.") },
     { t: "Burning Down the House", type: "cover", where: W("Stop Making Sense: a Tribute Album (2024)", "Stop Making Sense: a Tribute Album (2024)"), yt: "A73voVPhMfY", note: W("Talking Heads cover. The link is the behind-the-scenes video.", "Кавер на Talking Heads. Посилання — на відео «за лаштунками».") },
-    { t: "Sanity (demo)", type: "demo", where: W("This Is Why reissue", "Перевидання This Is Why"), yt: "PcqQBdPFm9Y", note: W("Also exists as a “Re:” version with Jack Antonoff.", "Існує й версія «Re:» з Джеком Антонофф.") },
+    { t: "Sanity (demo)", type: "demo", where: W("This Is Why reissue", "Перевидання This Is Why"), yt: "PcqQBdPFm9Y", note: W("Also exists as a “Re:” version with Jack Antonoff.", "Існує й версія «Re:» з Джеком Антонофом.") },
     { t: "Re: This Is Why", type: "remix", where: W("Remix album", "Реміксовий альбом"), note: W("Re-works by Foals, The Linda Lindas, Panda Bear, Zane Lowe, Wet Leg, Domi and JD Beck, Remi Wolf, Bartees Strange, Romy, Claud and Julien Baker.", "Перероблені версії від Foals, The Linda Lindas, Panda Bear, Zane Lowe, Wet Leg, Domi and JD Beck, Remi Wolf, Bartees Strange, Romy, Claud та Julien Baker.") },
     { t: "Passionfruit", type: "cover", where: "BBC Radio 1 Live Lounge", yt: "zqoj_3r9oqg", note: W("Drake cover.", "Кавер на Drake.") }
   ] },

@@ -31,7 +31,7 @@ EVENTS.push(
 
   { id: "headlining-2006", kind: "tour", era: "awkif", when: T2("2006", "2006"), title: T2("The first headlining tour (2006)", "Перший хедлайнерський тур (2006)"), search: "Paramore 2006 headlining tour",
     blurb: T2("In 2006 Paramore headlined their own US tour for the first time — alongside Warped Tour that summer.", "У 2006-му Paramore вперше самі очолили власний тур США — поряд із Warped Tour того літа."),
-    facts: [T2("Type: headlining.", "Тип: хедлайнерський."), T2("In September 2006, on this tour, fans threw condoms at 17-year-old Hayley between songs; she says she asked the person to come on stage the second time.", "У вересні 2006-го, під час цього туру, фани кидали презервативи у 17-річну Гейлі між піснями; вона каже, що вдруге покликала того, хто кинув, на сцену."), T2("Hayley's hair in photos from this autumn is light blonde.", "На фото тієї осені в Гейлі світле-русяве волосся.")],
+    facts: [T2("Type: headlining.", "Тип: хедлайнерський."), T2("In September 2006, on this tour, fans threw condoms at 17-year-old Hayley between songs; she says she asked the person to come on stage the second time.", "У вересні 2006-го, під час цього туру, фани кидали презервативи у 17-річну Гейлі між піснями; вона каже, що вдруге покликала того, хто кинув, на сцену."), T2("Hayley's hair in photos from this autumn is light blonde.", "На фото тієї осені в Гейлі світло-русяве волосся.")],
     videos: [], photos: ["hayleyNov06"] },
 
   { id: "riot-us-spring-2007", kind: "tour", era: "riot", when: T2("April–May 2007", "квітень–травень 2007"), title: T2("Riot! headlining US tour (spring 2007)", "Riot! — хедлайнерський тур США (весна 2007)"), search: "Paramore spring 2007 tour",

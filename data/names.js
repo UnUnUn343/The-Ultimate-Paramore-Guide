@@ -49,12 +49,20 @@
       <p class="nc-tag">${L(m.tagline)}</p>${b ? `<p class="nc-txt"><i>${typeof b.when === "object" ? L(b.when) : esc(b.when)}</i> ${esc(cut(L(b.text), 230))}</p>` : ""}<a class="nc-more" href="#m/${id}">${U("fullStory")} →</a></div>`;
     card.hidden = false; card.style.visibility = "hidden";
     const r = a.getBoundingClientRect(), w = card.offsetWidth, h = card.offsetHeight;
-    let x = Math.min(Math.max(8, r.left), innerWidth - w - 8), y = r.bottom + 8; if (y + h > innerHeight - 8) y = Math.max(8, r.top - h - 8);
+    let x = Math.min(Math.max(8, r.left), innerWidth - w - 8), y = r.bottom + 8; if (y + h > innerHeight - 8) { const above = r.top - h - 8; y = above >= 8 ? above : Math.max(8, innerHeight - h - 8); }
     card.style.left = x + "px"; card.style.top = y + "px"; card.style.visibility = "visible";
   };
   const hide = () => { clearTimeout(timer); timer = setTimeout(() => { if (card) card.hidden = true; }, 220); };
-  document.addEventListener("mouseover", e => { const a = e.target.closest?.("a.mname"); if (a) { clearTimeout(timer); timer = setTimeout(() => show(a), 180); } });
-  document.addEventListener("mouseout", e => { if (e.target.closest?.("a.mname")) hide(); });
-  document.addEventListener("focusin", e => { const a = e.target.closest?.("a.mname"); if (a) show(a); });
-  document.addEventListener("click", () => { if (card) card.hidden = true; });
+  // touch screens have no hover: the first tap on a name opens its card, a second tap (or the card's own links) goes to the page
+  const touchOnly = window.matchMedia("(hover: none)").matches;
+  document.addEventListener("mouseover", e => { if (touchOnly) return; const a = e.target.closest?.("a.mname"); if (a) { clearTimeout(timer); timer = setTimeout(() => show(a), 180); } });
+  document.addEventListener("mouseout", e => { if (!touchOnly && e.target.closest?.("a.mname")) hide(); });
+  document.addEventListener("focusin", e => { if (touchOnly) return; const a = e.target.closest?.("a.mname"); if (a) show(a); });
+  document.addEventListener("click", e => {
+    const a = e.target.closest?.("a.mname");
+    if (a && touchOnly && !(card && !card.hidden && cur === a)) { e.preventDefault(); show(a); return; }
+    if (card && !e.target.closest?.("#ncard")) card.hidden = true;
+  });
+  window.addEventListener("hashchange", () => { if (card) card.hidden = true; });
+  window.addEventListener("scroll", () => { if (card && !card.hidden) card.hidden = true; }, { passive: true }); // a fixed card would drift away from its name
 })();

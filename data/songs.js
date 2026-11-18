@@ -1,4 +1,4 @@
-﻿// Song pages (#s/<id>). One page per album track (built from each era's album.tracks) + hand-written "meaning map" annotations for the songs our sources cover.
+// Song pages (#s/<id>). One page per album track (built from each era's album.tracks) + hand-written "meaning map" annotations for the songs our sources cover.
 // No lyrics are stored or shown: annotations are our own paraphrase of what the band, the talk and the video essays say; lyrics link out to Genius.
 // v = [youtubeId, seconds]: the moment in a video essay where it's discussed (approximate: the essays' own chapter timestamps). Educational use.
 Object.assign(UI, {
@@ -9,8 +9,8 @@ Object.assign(UI, {
   meaningHint: { ua: "наведи або натисни на частину — з'явиться пояснення", en: "hover or tap a part to read it" },
   behind: { ua: "Історія пісні", en: "Behind the song" },
   lyricsTitle: { ua: "Тексти", en: "The lyrics" },
-  lyricsBody: { ua: "Тексти пісень захищені авторським правом, тому їх тут не опубліковано — вони відкриваються на Genius, де є й анотації фанатів. Тут — лише пояснення, написані для цього гіда.", en: "Lyrics are copyrighted, so they aren't published here — they open on Genius, which also has fan annotations. Here you only get explanations written for this guide." },
-  readGenius: { ua: "Тексти на Genius", en: "Lyrics on Genius" },
+  lyricsBody: { ua: "Тексти пісень захищені авторським правом, тому їх тут немає. Genius має сторінку цієї пісні: текст, довідку про пісню й анотації до рядків, які пишуть його учасники (під кожною анотацією видно авторів). Ми їх не копіюємо й не вбудовуємо, а лише посилаємося; тут — пояснення, написані для цього гіда.", en: "Lyrics are copyrighted, so they aren't here. Genius has a page for this song with the lyrics, a song bio and line-by-line annotations written by its contributors (each annotation lists who wrote it). We don't copy or embed any of it, we only link to it; what you read here is written for this guide." },
+  readGenius: { ua: "Genius: текст, довідка й анотації", en: "Genius: lyrics, song bio & annotations" },
   jumpTo: { ua: "Перейти до моменту", en: "Jump to the moment" },
   nextSong: { ua: "Наступна", en: "Next song" },
   prevSong: { ua: "Попередня", en: "Previous song" },
@@ -34,7 +34,7 @@ window.SONG_EXTRA = {
     A(Lb("Who wrote it", "Хто автор"), "Credits: Hayley, Josh and Taylor. A rumour says a schoolkid won a song contest and wrote it — nobody has found any evidence of that contest.", "У титрах: Гейлі, Джош і Тейлор. Чутка каже, що її написав школяр, який виграв конкурс, — але жодних доказів конкурсу немає.", [P2, 2700])
   ],
   "crushcrushcrush": [
-    A(Lb("The dark side of a crush", "Темний бік закоханості"), "Hayley described it as the opposite of sweet first-love songs: crushes can be frustrating, tedious, dark and angry.", "Гейлі описувала її як протилежність солодким піснями про першу любов: закоханість буває виснажливою, нудною, темною й злою."),
+    A(Lb("The dark side of a crush", "Темний бік закоханості"), "Hayley described it as the opposite of sweet first-love songs: crushes can be frustrating, tedious, dark and angry.", "Гейлі описувала її як протилежність солодким пісням про першу любов: закоханість буває виснажливою, нудною, темною й злою."),
     A(Lb("The “Low” mashup", "Мешап із «Low»"), "Live since 2008, Hayley follows the bridge with the chorus of Flo Rida's “Low”.", "Наживо з 2008-го Гейлі після бриджа співає приспів «Low» Flo Rida."),
     A(Lb("Third single", "Третій сингл"), "Released in January 2008 (US 15 Jan, UK 23 Jan).", "Вийшла в січні 2008-го (США — 15 січня, Британія — 23 січня).")
   ],
@@ -43,7 +43,7 @@ window.SONG_EXTRA = {
     A(Lb("The label story (one side)", "Історія з лейблом (одна сторона)"), "In Josh's 2010 account, Atlantic nearly dropped the band after the first demos and this song plus “Here We Go Again” saved it. The others never confirmed that.", "За версією Джоша 2010 року, Atlantic ледь не вигнав гурт після перших демо, а врятували його ця пісня та «Here We Go Again». Інші цього не підтверджували.", [P2, 2625])
   ],
   "when it rains": [
-    A(Lb("Content note", "Увага"), "The song is about someone Hayley knew who took their own life — she asks why they couldn't stay long enough to explain their pain. If this is hard for you, support exists; reach out to someone.", "Пісня про людину, яку знала Гейлі й яка пішла з життя: вона питає, чому та не встигла розповісти про свій біль. Якщо вам важко — зверніться по підтримку.", [P1, 722]),
+    A(Lb("Content note", "Увага"), "The song is about someone Hayley knew who took their own life — she asks why they couldn't stay long enough to explain their pain. If this is hard for you, support exists; reach out to someone.", "Пісня про людину, яку знала Гейлі й яка пішла з життя: вона питає, чому та не встигла розповісти про свій біль. Якщо тобі важко — звернись по підтримку.", [P1, 722]),
     A(Lb("A demo exists", "Є демо"), "A demo version appeared on the Riot! special edition (MVI).", "Демо-версія є на спеціальному виданні Riot! (MVI).")
   ],
   "let the flames begin": [
@@ -93,10 +93,11 @@ window.SONG_EXTRA = {
   ],
   "playing god": [
     A(Lb("About being judged", "Про осуд"), "About people who pressure Hayley or restrict what she says because of their faith — and the lyrics imply Josh was one of them. She has never explicitly said so.", "Про людей, що тиснуть на Гейлі через свою віру; з тексту видно, що Джош — один із них. Вона цього прямо ніколи не казала.", [P1, 1583]),
+    A(Lb("What Hayley said in 2009", "Що казала Гейлі 2009-го"), "She told Kerrang! in May 2009 that the song is “about self-righteous people and me feeling the blow of that”: it is aimed at people who place blame and should look at themselves first. It was the fifth and last single from the album, and its video, with the band tied up in her basement, is often read as a sequel to the Ignorance video. (Genius quotes the interview on its song page.)", "У травні 2009-го вона сказала Kerrang!, що пісня «про самовпевнених людей і те, як вона відчуває їхній удар»: вона спрямована на тих, хто роздає провину й має спершу глянути на себе. Це п'ятий і останній сингл альбому, а його кліп, де гурт зв'язаний у її підвалі, часто читають як продовження кліпу «Ignorance». (Інтерв'ю цитує сторінка пісні на Genius.)"),
     A(Lb("Was it “Barely Legal”?", "Чи це «Barely Legal»?"), "Fans theorise this reworked a cut song, “Barely Legal” (dated 4 Feb 2009). The band never confirmed it.", "Фанати вважають, що це переробка відкинутої «Barely Legal» (датованої 4 лютого 2009). Гурт цього не підтверджував.", [P2, 2985])
   ],
   "careful": [
-    A(Lb("The Bible dispute", "Суперечка про Біблію"), "In his 2010 blog Josh said a Careful lyric contradicted John 8:32. Hayley said the song is about what other people believe to be true about you.", "У блозі 2010 року Джош казав, що рядок із «Careful» суперечить Івана 8:32. Гейлі пояснювала, що пісня про те, що люди вважають правдою про тебе."),
+    A(Lb("The Bible dispute", "Суперечка про Біблію"), "In his 2010 blog Josh said a Careful lyric contradicted John 8:32. Hayley said the song is about what other people believe to be true about you.", "У блозі 2010 року Джош казав, що рядок із «Careful» суперечить Євангелії від Івана, 8:32. Гейлі пояснювала, що пісня про те, що люди вважають правдою про тебе."),
     A(Lb("The secret blog on screen", "Таємний блог на екрані"), "In the video and the documentary Hayley scrolls a blog dated 20 Jan 2009; fans read a poem above it about fearing a “perfect” housewife life.", "У кліпі та документалці Гейлі гортає блог від 20 січня 2009; фани розібрали над ним вірш про страх «ідеального» життя домогосподарки.")
   ],
   "brick by boring brick": [
@@ -105,7 +106,7 @@ window.SONG_EXTRA = {
   "the only exception": [
     A(Lb("Meant as an interlude", "Мала бути інтерлюдією"), "Meant to be a two-minute interlude with Hayley and Josh on guitar; once the band heard the lyrics they made it a full song.", "Мала бути двохвилинною інтерлюдією (Гейлі й Джош на гітарі); почувши текст, гурт зробив із неї повну пісню.", [P1, 2644]),
     A(Lb("The first love song", "Перша пісня про кохання"), "Hayley's first love song: it draws on her parents' divorce and losing faith in love until “the one exception” appeared. She sang it to her mum, who cried.", "Перша пісня Гейлі про кохання: у ній розлучення батьків і втрата віри в любов, доки не з'явився «єдиний виняток». Вона заспівала її мамі — та розплакалась.", [P1, 951]),
-    A(Lb("Shelved for years", "Роками не грали"), "Not played from Parahoy 2016 until the 2023 South America tour; fans link that to Chad. Grammy-nominated.", "Не грали від Parahoy 2016 до туру Південною Америкою 2023-го; фани пов'язують це з Чедом. Номінована на «Греммі».")
+    A(Lb("Shelved for years", "Роками не грали"), "Not played from Parahoy 2016 until the 2023 South America tour; fans link that to Chad. Grammy-nominated.", "Не грали з Parahoy 2016-го до туру Південною Америкою 2023-го; фани пов'язують це з Чедом. Номінована на «Греммі».")
   ],
   "misguided ghosts": [
     A(Lb("The kick drum", "Бас-барабан"), "The kick drum sound is Zac thumping a magazine — from the Behind Brand New Eyes documentary.", "Звук бас-барабана — Зак б'є по журналу (з документалки Behind Brand New Eyes).", [P2, 2830]),
@@ -140,7 +141,7 @@ window.SONG_EXTRA = {
   "idle worship": [A(Lb("On the pedestal", "На п'єдесталі"), "About how hard it is when people put you on a pedestal; it leads straight into “No Friend”.", "Про те, як важко, коли тебе ставлять на п'єдестал; одразу переходить у «No Friend».")],
   "no friend": [A(Lb("Aaron Weiss", "Аарон Вайс"), "Recorded with Aaron Weiss of mewithoutYou, who speaks the text over the music — a nod to the band that inspired “Part II”.", "Записана з Аароном Вайсом із mewithoutYou: він начитує текст поверх музики — ляпас до гурту, що надихнув «Part II».")],
   "this is why": [A(Lb("The only title track", "Єдина заголовна"), "The only title track in Paramore's discography. It won a Grammy in an alternative category in 2024.", "Єдина заголовна пісня в дискографії Paramore. У 2024-му перемогла в альтернативній категорії «Греммі».")],
-  "running out of time": [A(Lb("Always late", "Вічно запізнююсь"), "About Hayley being always late and disorganised; her friend Taylor Swift, who plans everything, was the inspiration. In the video she pays homage to Vivienne Westwood with the same horns.", "Про те, що Гейлі вічно запізнюється; натхненням стала подруга Тейлор Свіфт, яка завжди все планує. У кліпі вона віддає шану Вів'єн Вествуд тими самими «ріжками».", [P1, 1128])],
+  "running out of time": [A(Lb("Always late", "Вічно запізнююсь"), "About Hayley being always late and disorganised; her friend Taylor Swift, who plans everything, was the inspiration. In the video she pays homage to Vivienne Westwood with the same horns.", "Про те, що Гейлі вічно запізнюється; натхненням стала подруга — Тейлор Свіфт, яка завжди все планує. У кліпі вона віддає шану Вів'єн Вествуд тими самими «ріжками».", [P1, 1128])],
   "c est comme ca": [A(Lb("Four or seven “na”s?", "Чотири чи сім «na»?"), "Fans still argue how many times Hayley sings “na”; slowed down you can hear seven, and the a cappella is on YouTube. In Chile she asked the crowd to stand still for the whole song — a meme.", "Фанати досі сперечаються, скільки разів вона співає «na»; уповільнено чути сім, а акапела є на YouTube. У Чилі вона просила зал стояти нерухомо всю пісню — вийшов мем.")],
   "you first": [A(Lb("Nearly cut", "Ледь не викинули"), "Taylor wasn't satisfied with his guitar parts and almost cut it from the album.", "Тейлору не подобалися його гітарні партії, і пісню ледь не викинули з альбому.", [P1, 1152])],
   "big man little dignity": [A(Lb("Elke", "Ельке"), "Backing vocals by Elke (Kayla Graninger), who toured with the band in 2023.", "Бек-вокал — Ельке (Кейла Ґраніндер), що їздила з гуртом у тур 2023-го.")],
