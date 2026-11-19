@@ -40,13 +40,15 @@
   // hover card (one shared element)
   let card, timer, cur;
   const show = a => {
-    const id = a.dataset.m, m = MEMBERS[id]; if (!m) return; cur = a;
+    const ek = a.dataset.e, id = a.dataset.m, m = ek ? null : MEMBERS[id]; if (!ek && !m) return; cur = a; // ek: an album, song, tour or event link made by links.js
     card = card || Object.assign(document.body.appendChild(document.createElement("div")), { id: "ncard" });
     card.onmouseenter = () => clearTimeout(timer); card.onmouseleave = hide;
+    if (ek) { const h = window.entCard ? entCard(ek) : ""; if (!h) return; card.innerHTML = h; } else {
     const ph = typeof realPhoto === "function" ? realPhoto(m.photo) : null, b = (m.beats || [])[0];
-    card.innerHTML = `<a class="nc-pic" href="#m/${id}">${ph ? `<img src="${ph.src}" alt="${esc(m.name)}">` : `<span class="nc-mono">${esc(m.name[0])}</span>`}</a>
+    card.innerHTML =`<a class="nc-pic" href="#m/${id}">${ph ? `<img src="${ph.src}" alt="${esc(m.name)}">` : `<span class="nc-mono">${esc(m.name[0])}</span>`}</a>
       <div class="nc-body"><a class="nc-name" href="#m/${id}"><b>${esc(m.name)}</b><small>${L(m.role)}</small></a>
       <p class="nc-tag">${L(m.tagline)}</p>${b ? `<p class="nc-txt"><i>${typeof b.when === "object" ? L(b.when) : esc(b.when)}</i> ${esc(cut(L(b.text), 230))}</p>` : ""}<a class="nc-more" href="#m/${id}">${U("fullStory")} →</a></div>`;
+    }
     card.hidden = false; card.style.visibility = "hidden";
     const r = a.getBoundingClientRect(), w = card.offsetWidth, h = card.offsetHeight;
     let x = Math.min(Math.max(8, r.left), innerWidth - w - 8), y = r.bottom + 8; if (y + h > innerHeight - 8) { const above = r.top - h - 8; y = above >= 8 ? above : Math.max(8, innerHeight - h - 8); }
@@ -55,11 +57,11 @@
   const hide = () => { clearTimeout(timer); timer = setTimeout(() => { if (card) card.hidden = true; }, 220); };
   // touch screens have no hover: the first tap on a name opens its card, a second tap (or the card's own links) goes to the page
   const touchOnly = window.matchMedia("(hover: none)").matches;
-  document.addEventListener("mouseover", e => { if (touchOnly) return; const a = e.target.closest?.("a.mname"); if (a) { clearTimeout(timer); timer = setTimeout(() => show(a), 180); } });
-  document.addEventListener("mouseout", e => { if (!touchOnly && e.target.closest?.("a.mname")) hide(); });
-  document.addEventListener("focusin", e => { if (touchOnly) return; const a = e.target.closest?.("a.mname"); if (a) show(a); });
+  document.addEventListener("mouseover", e => { if (touchOnly) return; const a = e.target.closest?.("a.mname,a.ent"); if (a) { clearTimeout(timer); timer = setTimeout(() => show(a), 180); } });
+  document.addEventListener("mouseout", e => { if (!touchOnly && e.target.closest?.("a.mname,a.ent")) hide(); });
+  document.addEventListener("focusin", e => { if (touchOnly) return; const a = e.target.closest?.("a.mname,a.ent"); if (a) show(a); });
   document.addEventListener("click", e => {
-    const a = e.target.closest?.("a.mname");
+    const a = e.target.closest?.("a.mname,a.ent");
     if (a && touchOnly && !(card && !card.hidden && cur === a)) { e.preventDefault(); show(a); return; }
     if (card && !e.target.closest?.("#ncard")) card.hidden = true;
   });
