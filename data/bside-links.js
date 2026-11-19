@@ -1,6 +1,7 @@
 // YouTube links for B-sides. official: true = Paramore / Hayley / BBC / the YouTube "- Topic" art-track channel.
 // official: false = a fan or third-party upload (verified to exist via YouTube oEmbed, not endorsed). Items with neither get a YouTube search link.
 window.BSIDE_LINKS = {
+  "Mammoth City Messengers songs": { id: "VRbve0ajOBo", by: "Mammoth City Messengers - Topic (the track “Jumping Inside”)", official: true },
   "Plane Crash Dream": { id: "6DDfiWRh6Zs", by: "YOUwithoutme0 (fan upload)", official: false },
   "Breathe (Until Tomorrow)": { id: "dB5VcT_OeXg", by: "Chillapuccino (fan upload)", official: false },
   "Stuck on You": { id: "bWT5j8qb7C0", by: "Paramore - Topic", official: true },
