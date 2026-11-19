@@ -193,7 +193,7 @@ const HAIR = {
 };
 const HAIR_NOTES = {
   trio: T("Bustle's 2014 retrospective lists a blonde stretch, a pink stretch, a darker “average” shade, an orange-and-yellow phase and “a little bit of everything” — with no dates, so they can't be placed. It also mentions a year when she changed colour nine times on tour.", "Ретроспектива Bustle 2014 року згадує блонд, рожевий, темніший «звичайний» відтінок, помаранчево-жовту фазу та «потроху всього» — але без дат, тож їх не вдається розмістити. Там же є рік, коли вона змінила колір дев'ять разів у турі."),
-  crisis: T("Your sources don't describe her hair in 2015–16.", "У твоїх джерелах немає опису її волосся у 2015–16."),
+  crisis: T("Your sources don't describe her hair in 2015–16.", "У використаних джерелах немає опису її волосся у 2015–16."),
   now: T("She says she'd like to let it grow long — and eventually grey — and has talked about trying a mullet.", "Каже, що хоче відростити волосся довге — і зрештою сиве, — і згадувала, що може спробувати «мулет»."),
   riot: T("Good Dye Young later made the orange a product: its first shades in 2016 included “Riot”.", "Згодом Good Dye Young зробив цей помаранчевий продуктом: серед перших відтінків 2016 року був «Riot».")
 };

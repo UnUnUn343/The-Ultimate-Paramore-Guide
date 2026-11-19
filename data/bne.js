@@ -4,7 +4,7 @@ ERA_PAGES.bne = {
     photo: "band10",
     kicker: { ua: "АЛЬБОМ 03 · 2009–2010", en: "ALBUM 03 · 2009–2010" },
     quote: { ua: "Пісні про власних одногрупників — спробувати побачити одне одного «новими очима».", en: "Songs about their own bandmates — an attempt to see each other with “brand new eyes”." },
-    stats: [{ ua: "Дебют: №2 Billboard 200", en: "Debuted at No. 2 on the Billboard 200" }, { ua: "Продюсер: Роб Кавалло", en: "Producer: Rob Cavallo" }, { ua: "Перший альбом усіма п'ятьма", en: "First album with all five members" }]
+    stats: [{ ua: "Дебют: №2 Billboard 200", en: "Debuted at No. 2 on the Billboard 200" }, { ua: "Продюсер: Роб Кавалло", en: "Producer: Rob Cavallo" }, { ua: "Перший альбом у складі всіх п'ятьох", en: "First album with all five members" }]
   },
   story: {
     lead: { ua: "Чудова платівка, записана в найважчий час, — і одразу після неї гурт розпався.", en: "A great album made at the worst time — and the band came apart right after it." },
@@ -71,7 +71,7 @@ ERA_PAGES.bne = {
     { tag: "fact", text: { ua: "Перед альбомом Зак і Тейлор зняли жартівливий кліп «Baby Come Back 2 Me» — з автотюном і безглуздими костюмами. А Гейлі записала панк-кавер на мем «Bed Intruder».", en: "Before the album Zac and Taylor made a joke video, “Baby Come Back 2 Me”, with autotune and silly costumes. And Hayley recorded a punk cover of the “Bed Intruder” meme." } },
     { tag: "fact", text: { ua: "Дві фанатки залізли в недобудований підвал Гейлі — їх впустив робітник — і зняли все на відео; Гейлі писала, що її засмутила така неповага.", en: "Two fans got into Hayley's unfinished basement — a worker let them in — and filmed it; Hayley wrote that she was upset by the disrespect." } },
     { tag: "rumour", text: { ua: "Чутка: невидана «Barely Legal» (2009) нібито не ввійшла через надто зухвалий текст — Гейлі обіцяє затягти кривдника з собою в пекло. Фанати вважають, що її переробили на «Playing God».", en: "Rumour: the unreleased “Barely Legal” (2009) was supposedly dropped for its too-bold lyric — Hayley vows to drag an offender to hell with her. Fans think it became “Playing God”." } },
-    { tag: "rumour", text: { ua: "Пікантна деталь, що «The Only Exception» — про нового хлопця Гейлі Чеда, — це фанатська інтерпретація; писала її Гейлі разом із колишнім, Джошем.", en: "The juicy detail that “The Only Exception” is about Hayley's new boyfriend Chad is a fan interpretation; Hayley wrote it with her ex, Josh." } },
+    { tag: "rumour", text: { ua: "Припущення, що «The Only Exception» — про нового хлопця Гейлі Чеда, — це фанатська інтерпретація; пісню писала Гейлі разом із колишнім, Джошем.", en: "The juicy detail that “The Only Exception” is about Hayley's new boyfriend Chad is a fan interpretation; Hayley wrote it with her ex, Josh." } },
     { tag: "rumour", text: { ua: "У 2010 році Джош також звинувачував у блозі: батько Гейлі постійно погрожував «закрити» гурт, якщо хтось скаржитиметься; менеджер запрошував братів назад без Тейлора й Джейсона. Це лише слова Джоша.", en: "In 2010 Josh also claimed in the blog that Hayley's father constantly threatened to “shut down” the band if anyone complained, and that a manager invited the brothers back without Taylor and Jason. These are only Josh's words." } }
   ]
 };

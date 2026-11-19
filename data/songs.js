@@ -163,7 +163,7 @@ ERAS.forEach(e => {
 
 window.SONG_VIDEOS = {
   "miracle": [
-    { id: "_Av6RN776I4", type: "clip", title: { en: "Miracle outro — Nashville (fan upload)", ua: "Miracle, кода — Нешвілл (фанатське відео)" }, by: "planecrashdream" },
+    { id: "_Av6RN776I4", type: "clip", title: { en: "Miracle outro — Nashville (fan upload)", ua: "Miracle, кода — Нашвілл (фанатське відео)" }, by: "planecrashdream" },
     { id: "nEvgHLBGrv4", type: "clip", title: { en: "“Miracle Outro” — live in Philadelphia, 17 Oct 2009 (fan upload)", ua: "«Miracle Outro» — наживо у Філадельфії, 17 жовтня 2009 (фанатське відео)" }, by: "RTMorasonMD" }
   ],
   "here we go again": [

@@ -521,7 +521,7 @@ Object.assign(ICE_EXT, {
 Object.assign(ICE_EXT, {
   "^Fan accounts": [{ label: "Louder: Paramore wipe their social accounts (Dec 2023)", url: "https://www.loudersound.com/news/paramore-fans-have-questions-after-band-s-social-accounts-are-wiped-clean-and-website-is-pulled" }, { label: "Music Box: Paramore and fan communication", url: "https://themusicboxmedia.com/news-extras/paramores-influence-on-cultural-communication-in-music" },
     { note: "No source names specific fan accounts. Press does describe the fan community (LiveJournal in the 2000s, the band's own fan club 2007–2013, today's Instagram and TikTok fan accounts) and how fans reacted when the band's accounts were wiped in December 2023." }],
-  "^Edibles": [{ note: "Searches of interviews with Hayley found nothing about this. Left as an unconfirmed fan item." }],
+  "^Edibles": [{ note: "No interview or article about this was found. The guide's This Is Why era page repeats the fan claim that Hayley joked about edibles in a TikTok, so it stays an unconfirmed iceberg item." }],
   "^How-To Videos": [{ label: "MusicRadar: Misery Business snare sound", url: "https://www.musicradar.com/news/paramore-misery-business-snare-drum-sound-recreation-with-no-samples" }, { label: "Wonder How To: “My Heart” on acoustic guitar", url: "https://acoustic-guitar.wonderhowto.com/how-to/play-my-heart-by-paramore-acoustic-guitar-253169" },
     { note: "No official how-to videos from the band were found. Third-party lessons exist (such as the “My Heart” tutorial), and MusicRadar covers how Zac's snare sound on “Misery Business” was made." }],
   "^The Pressure Flip": [{ note: "Sources on the “Pressure” video (director Shane Drake, 2005) describe a couple stuck in jobs they dislike and a recurring pressure dial; none mentions a flip, so this stays unconfirmed. Watch the video to check." }],
@@ -537,5 +537,5 @@ Object.assign(ICE_EXT, {
     { note: "The song is on All We Know Is Falling (2005), written by Hayley and Josh. The wiki gives a personal explanation, but it is not from an interview or official statement, so it is not repeated here." }],
   "^Yard Sales": [{ label: "Gigwise: Paramore auction items for Japan relief", url: "https://www.gigwise.com/news/62252/Paramore-Auction-Off-Equipment-And-Clothes-For-Japan-Relief-Fund" }, { label: "Look to the Stars: Paramore launch a charity auction", url: "https://www.looktothestars.org/news/6055-paramore-launches-charity-auction-for-japan" },
     { note: "Found: the “Paramore Yard Sale”, an eBay auction of clothes, accessories and gear in March–April 2011, with proceeds going to the Red Cross after the Japan earthquake and tsunami. Reports differ on the item count (30 or more than 60); the final total was not found." }],
-  "^Anne$": [{ note: "Searches found no Paramore song, person or fan theory with this name, so nothing is confirmed." }]
+  "^Anne$": [{ note: "No outside source was found. The guide's Hayley chapter lists “Ms. Anne” as her first car, her mum's Mazda, as an unconfirmed iceberg item." }]
 });
