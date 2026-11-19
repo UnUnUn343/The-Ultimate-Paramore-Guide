@@ -508,3 +508,14 @@ a.mname:hover,a.mname:focus-visible{color:var(--accent);border-bottom-style:soli
 .sb-r mark{background:color-mix(in srgb,var(--accent) 45%,transparent);color:inherit;border-radius:3px}
 .sb-r.on,.sb-r:hover{background:#ffffff12}
 .sflash{outline:3px solid var(--accent);outline-offset:6px;border-radius:6px;transition:outline-color .4s}
+
+/* music video guide */
+.mv-grid{display:grid;gap:26px}
+.mv-card{display:grid;grid-template-columns:minmax(0,420px) minmax(0,1fr);gap:24px;align-items:start}
+.mv-card .vid{margin:0}
+.mv-body h3{margin:0 0 6px;font:600 24px var(--display);letter-spacing:.04em;text-transform:var(--tt,uppercase)}
+.mv-body h3 small{color:var(--accent);font-size:15px;margin-left:8px}
+.mv-dir{margin:0 0 6px;color:var(--muted);font-size:13px;letter-spacing:.04em}
+.mv-t{margin:0 0 6px;font:600 17px var(--display);color:var(--accent)}
+.mv-body p{margin:6px 0 0;max-width:62ch;line-height:1.55}
+@media (max-width:860px){.mv-card{grid-template-columns:1fr}}

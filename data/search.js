@@ -3,8 +3,8 @@
 (() => {
   const norm = s => String(s || "").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[’'`ʼ]/g, "").replace(/[^a-z0-9а-яіїєґ\s]/g, " ").replace(/\s+/g, " ").trim();
   const tx = v => v && typeof v === "object" ? [v.en, v.ua].filter(Boolean).join(" ") : String(v || "");
-  const TYPES = [["era", { ua: "Епохи", en: "Eras" }], ["member", { ua: "Люди", en: "People" }], ["song", { ua: "Пісні", en: "Songs" }], ["event", { ua: "Події й тури", en: "Events & tours" }], ["bside", { ua: "B-сайди", en: "B-sides" }], ["merch", { ua: "Мерч", en: "Merch" }], ["ice", { ua: "Айсберг", en: "Iceberg" }], ["iv", { ua: "Інтерв'ю", en: "Interviews" }], ["video", { ua: "Відео", en: "Videos" }]];
-  const W = { era: 8, member: 9, song: 6, event: 5, bside: 3, merch: 3, ice: 2, iv: 2, video: 1 };
+  const TYPES = [["era", { ua: "Епохи", en: "Eras" }], ["member", { ua: "Люди", en: "People" }], ["song", { ua: "Пісні", en: "Songs" }], ["event", { ua: "Події й тури", en: "Events & tours" }], ["bside", { ua: "B-сайди", en: "B-sides" }], ["mv", { ua: "Кліпи", en: "Music videos" }], ["merch", { ua: "Мерч", en: "Merch" }], ["ice", { ua: "Айсберг", en: "Iceberg" }], ["iv", { ua: "Інтерв'ю", en: "Interviews" }], ["video", { ua: "Відео", en: "Videos" }]];
+  const W = { mv: 5, era: 8, member: 9, song: 6, event: 5, bside: 3, merch: 3, ice: 2, iv: 2, video: 1, mv: 5 };
   const LG = () => (typeof lang === "string" ? lang : "en"); // app.js keeps the current language in a global `lang`
   let index = null, sel = 0, shown = [];
   const build = () => {
@@ -15,6 +15,7 @@
     (window.SONGS || []).forEach(s => add("song", s.title, tx(s.album), "#s/" + s.id, tx(s.note) + " " + ((window.SONG_EXTRA || {})[s.key] || []).map(a => tx(a.l) + " " + tx(a.t)).join(" ")));
     (window.EVENTS || []).forEach(e => add("event", tx(e.title), tx(e.when), "#e/" + e.id, tx(e.lead || e.intro || "")));
     (window.BSIDES || []).forEach(g => g.items.forEach(i => add("bside", i.t, tx(i.where), "#bsides", tx(i.note), i.t)));
+    (window.MVS || []).forEach(m => { const sg = (window.SONGS || []).find(x => x.id === m.song); const tt = sg ? sg.title : (m.title || m.song); add("mv", tt + " — " + (LG() === "ua" ? "кліп" : "video"), [m.y, m.dir].filter(Boolean).join(" · "), "#mv", tx(m.item) + " " + tx(m.note) + " " + (m.dir || "") + " " + tt, tt); });
     (window.MERCH || []).forEach(m => add("merch", tx(m.item), m.y, "#merch", tx(m.note), tx(m.item).split(" ")[0]));
     (window.ICEBERG || []).forEach(e => add("ice", e[2], "", "#iceberg", ((window.ICE_EXT && Object.keys(ICE_EXT).filter(k => new RegExp(k, "i").test(e[2])).map(k => ICE_EXT[k].map(x => x.note || x.label || "").join(" ")).join(" ")) || ""), e[2]));
     (window.INTERVIEWS || []).forEach(i => add("iv", i.title, [i.by, i.outlet, i.date].filter(Boolean).join(" · "), "#interviews", tx(i.desc), i.title));
