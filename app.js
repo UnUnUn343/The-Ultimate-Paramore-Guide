@@ -5,7 +5,8 @@ const store = {
   get: k => { try { return localStorage.getItem(k); } catch { return null; } },
   set: (k, v) => { try { localStorage.setItem(k, v); } catch {} }
 };
-let lang = store.get("lang") || (navigator.language.toLowerCase().startsWith("uk") ? "ua" : "en");
+const qLang = new URLSearchParams(location.search).get("lang"); // a shared Ukrainian link (/uk/...) opens in Ukrainian without changing the saved choice
+let lang = (qLang === "ua" || qLang === "en" ? qLang : "") || store.get("lang") ||(navigator.language.toLowerCase().startsWith("uk") ? "ua" : "en");
 // Source notes: write {{note text}} inside any string and L() turns it into an invisible token; injectMarks() (after render) swaps each token
 // for a small ⓘ with the note on hover/focus, and #sources lists them all. Tokens survive esc() because they hold only private-use characters.
 const NOTES = [];

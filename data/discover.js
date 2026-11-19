@@ -47,7 +47,27 @@
     b.addEventListener("click", () => surprise()); s.after(b);
   };
   document.addEventListener("keydown", ev => { if (ev.key === "r" && !ev.ctrlKey && !ev.metaKey && !ev.altKey && !/input|textarea|select/i.test(ev.target.tagName) && !ev.target.isContentEditable) surprise(); });
-  mountBtn(); document.addEventListener("DOMContentLoaded", mountBtn);
+  // ---- share: copies the clean link of the page you are on (a small static page with its own preview card, made by tools/build-share.js)
+  const shareUrl = () => {
+    const [a, b] = location.hash.replace(/^#/, "").split("/"), root = location.href.split("#")[0].split("?")[0].replace(/[^/]*$/, "");
+    const p = !a || a === "home" ? "" : (a === "s" || a === "e" || a === "m") && b ? a + "/" + b + "/" : a + "/";
+    return root + (typeof lang === "string" && lang === "ua" ? "uk/" : "") + p;
+  };
+  const mountShare = () => {
+    const r = document.getElementById("rbtn") || document.getElementById("sbtn"); if (!r || document.getElementById("shbtn")) return;
+    const b = Object.assign(document.createElement("button"), { id: "shbtn", className: r.className, type: "button" });
+    b.innerHTML = `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 10.5l6.8-4M8.6 13.5l6.8 4"/></svg>`;
+    const lab = () => { b.title = b.ariaLabel = T("Copy a share link for this page", "Скопіювати посилання на цю сторінку"); }; lab(); b.addEventListener("mouseover", lab); b.addEventListener("focus", lab);
+    b.addEventListener("click", async () => {
+      const url = shareUrl();
+      try {
+        if (navigator.share && matchMedia("(pointer:coarse)").matches) { await navigator.share({ title: document.title, url }); return; }
+        await navigator.clipboard.writeText(url); toast(T("Link copied — pasting it shows a preview card", "Посилання скопійовано — при вставленні з'явиться картка"));
+      } catch (err) { if (err && err.name === "AbortError") return; window.prompt(T("Copy this link", "Скопіюй посилання"), url); }
+    });
+    r.after(b);
+  };
+  mountBtn(); mountShare(); document.addEventListener("DOMContentLoaded", () => { mountBtn(); mountShare(); });
 
   // ---- start here
   const PATHS = [
