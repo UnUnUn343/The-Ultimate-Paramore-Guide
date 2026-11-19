@@ -10,6 +10,7 @@ const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;",
 const clean = s => String(s || "").replace(/\{\{[\s\S]*?\}\}/g, "").replace(/<[^>]+>/g, "").replace(/\s+/g, " ").trim();
 const cut = (s, n) => { s = clean(s); if (s.length <= n) return s; const t = s.slice(0, n), i = Math.max(t.lastIndexOf(". "), t.lastIndexOf("; ")); return i > n * 0.55 ? t.slice(0, i + 1) : t.replace(/\s\S*$/, "") + "…"; };
 const big = u => (u || "").replace("ab67616d00001e02", "ab67616d0000b273"); // Spotify cover: 300px -> 640px version of the same image
+const yrs = (y, lg) => String(y).replace(/–$/, lg === "ua" ? "–тепер" : "–now");
 const safe = s => !/report|rumou?r|allegedly|supposed|fans? (think|believe|say)|чутк|нібито|за повідомленнями|фанат|above|below|timeline|вище|нижче/i.test(s); // no gossip in a share card
 const abs = u => (!u ? "" : (/^https?:/.test(u) ? u : BASE + u.replace(/^\//, "")).replace(/\(/g, "%28").replace(/\)/g, "%29"));
 
@@ -28,13 +29,13 @@ function meta(kind, id, lg) {
   if (kind === "home") return { path: "", title: site, desc: lg === "ua" ? "Повний двомовний гід по Paramore, епоха за епохою: історія, склад, волосся Гейлі, альбоми, відео й глибокі зрізи." : "A complete, bilingual guide to Paramore, era by era: story, lineup, Hayley's hair, albums, videos and deep cuts.", img: home, hash: "#home", related: [] };
   if (kind === "era") {
     const e = era(id), h = (run("ERA_PAGES")[id] || {}).hero || {}, stats = (h.stats || []).map(L).join(" · ");
-    return { path: id, title: `${L(e.name)} (${e.years}) — Paramore`, desc: cut([h.quote && L(h.quote).replace(/[.]+$/, "."), stats && stats + "."].filter(Boolean).join(" "), 220), img: cover(e) || home, hash: "#" + id,
+    return { path: id, title: `${L(e.name)} (${yrs(e.years, lg)}) — Paramore`, desc: cut([h.quote && L(h.quote).replace(/[.]+$/, "."), stats && stats + "."].filter(Boolean).join(" "), 220), img: cover(e) || home, hash: "#" + id,
       related: [...run("EVENTS").filter(x => x.era === id).map(x => ["e/" + x.id, L(x.title)]), ...run("SONGS").filter(s => s.era === id).map(s => ["s/" + s.id, s.title])] };
   }
   if (kind === "song") {
     const s = run("SONGS").find(x => x.id === id), e = era(s.era), ex = (run("SONG_EXTRA")[s.key] || [])[0];
     const first = ex ? clean(L(ex.t)) : "";
-    return { path: "s/" + id, title: `${s.title} — Paramore`, desc: cut(safe(L(s.note)) ? `${L(s.album)} (${e.years}). ${L(s.note)}` + (L(s.note).length < 60 && first && safe(first) ? " " + first : "") : (lg === "ua" ? `${s.title} — з альбому ${L(s.album)} (${e.years}): що сказав гурт, відео та місце в історії.` : `${s.title}, from ${L(s.album)} (${e.years}): what the band has said about it, videos and where it fits in the story.`), 220), img: cover(e) || home, hash: "#s/" + id,
+    return { path: "s/" + id, title: `${s.title} — Paramore`, desc: cut(safe(L(s.note)) ? `${L(s.album)} (${yrs(e.years, lg)}). ${L(s.note)}` + (L(s.note).length < 60 && first && safe(first) ? " " + first : "") : (lg === "ua" ? `${s.title} — з альбому ${L(s.album)} (${yrs(e.years, lg)}): що сказав гурт, відео та місце в історії.` : `${s.title}, from ${L(s.album)} (${yrs(e.years, lg)}): what the band has said about it, videos and where it fits in the story.`), 220), img: cover(e) || home, hash: "#s/" + id,
       related: [[s.era, L(e.name)], ...run("SONGS").filter(x => x.era === s.era && x.id !== id).slice(0, 12).map(x => ["s/" + x.id, x.title])] };
   }
   if (kind === "event") {

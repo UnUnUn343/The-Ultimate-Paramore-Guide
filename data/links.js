@@ -13,7 +13,7 @@
   // [phrase, target]; the longer phrase always wins at the same place
   const ALBUMS = [["All We Know Is Falling", "era:awkif"], ["Riot!", "era:riot"], ["Brand New Eyes", "era:bne"], ["After Laughter", "era:al"], ["This Is Why", "era:tiw"], ["Singles Club", "era:trio"],
     ["Petals for Armor", "era:hiatus"], ["FLOWERS for VASES", "era:hiatus"], ["Flowers for Vases", "era:hiatus"], ["self-titled album", "era:paramore"], ["Self-Titled", "era:paramore"],
-    ["Ego Death at a Bachelorette Party", "ev:ego-death-tour"]];
+    ["Ego Death at a Bachelorette Party", "era:now"]];
   const EVS = [["Honda Civic Tour", "ev:honda-civic-tour"], ["Warped Tour", "ev:warped-tour"], ["The Final Riot!", "ev:final-riot"], ["Final Riot!", "ev:final-riot"], ["MTV TRL", "ev:trl-rihanna"], ["Parahoy!", "ev:parahoy"], ["Parahoy", "ev:parahoy"],
     ["Monumentour", "ev:monumentour-reading"], ["Tiny Desk", "ev:tiny-desk"], ["Coachella", "ev:wwwy-coachella-2022"], ["When We Were Young", "ev:wwwy-coachella-2022"], ["Tonight Show", "ev:tonight-show"], ["Eras Tour", "ev:eras-tour"],
     ["MTV Cribs", "ev:mtv-cribs"], ["Kiss Off", "ev:kiss-off"], ["Ego Death Tour", "ev:ego-death-tour"], ["Brand New Eyes World Tour", "ev:bne-world-tour"], ["Self-Titled Tour", "ev:self-titled-tour"],

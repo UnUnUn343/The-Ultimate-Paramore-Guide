@@ -71,22 +71,22 @@
 
   // ---- start here
   const PATHS = [
-    { en: "I loved After Laughter", ua: "Мені подобається After Laughter", d: ["The sunny pop record with the darkest lyrics, and how the band got there.", "Сонячний поп з найтемнішими текстами — і як гурт до цього дійшов."], steps: [
-      ex("#s/hard-times", "“Hard Times”, the first single", "«Hard Times» — перший сингл"), ex("#al", "The After Laughter era", "Епоха After Laughter"), ex("#crisis", "How the band almost ended (2015–16)", "Як гурт мало не завершився (2015–16)"),
+    { en: "I loved After Laughter", ua: "Я люблю After Laughter", d: ["The sunny pop record with the darkest lyrics, and how the band got there.", "Сонячний поп із найтемнішими текстами — і як гурт до цього дійшов."], steps: [
+      ex("#s/hard-times", "“Hard Times”, the first single", "«Hard Times» — перший сингл"), ex("#al", "The After Laughter era", "Епоха After Laughter"), ex("#crisis", "How the band almost ended (2015–16)", "Як гурт ледь не розпався (2015–16)"),
       ex("#e/tiny-desk", "Tiny Desk concerts", "Tiny Desk-концерти"), ex("#e/hamburg-2017", "Hamburg 2017: the first show after the divorce", "Гамбург 2017: перший концерт після розлучення"), ex("#m/zac", "Zac's return", "Повернення Зака")] },
-    { en: "I want the drama", ua: "Хочу драму", d: ["Exits, a blog post, a lawsuit — each told from the sources, with the rumours marked.", "Відходи, блог, позов — за джерелами, а чутки позначено."], steps: [
+    { en: "I want the drama", ua: "Хочу драму", d: ["Exits, a blog post, a lawsuit — each told from the sources, with the rumours marked.", "Відходи, блог і позов — за джерелами; чутки позначено як чутки."], steps: [
       ex("#bne", "Brand New Eyes: songs about each other", "Brand New Eyes: пісні одне про одного"), ex("#m/josh", "Josh Farro: the exit and the blog", "Джош Фарро: відхід і блог"), ex("#crisis", "Jeremy's lawsuit, Hayley's crisis", "Позов Джеремі й криза Гейлі"),
       ex("#m/jeremy", "Jeremy Davis", "Джеремі Девіс"), ex("#iceberg", "The iceberg: rumours, marked as rumours", "Айсберг: чутки, позначені як чутки")] },
-    { en: "I came for This Is Why", ua: "Я прийшов(-ла) на This Is Why", d: ["The newest era: post-punk, the Eras Tour, the Grammys.", "Найновіша епоха: пост-панк, Eras Tour, «Греммі»."], steps: [
+    { en: "I came for This Is Why", ua: "Я тут через This Is Why", d: ["The newest era: post-punk, the Eras Tour, the Grammys.", "Найновіший альбом гурту: пост-панк, Eras Tour і «Греммі»."], steps: [
       ex("#s/this-is-why", "“This Is Why”", "«This Is Why»"), ex("#tiw", "The This Is Why era", "Епоха This Is Why"), ex("#e/eras-tour", "Paramore on the Eras Tour", "Paramore на Eras Tour"), ex("#e/grammys", "The Grammys", "«Греммі»"), ex("#now", "Where the band is now", "Де гурт зараз")] },
-    { en: "I want Hayley's solo work", ua: "Хочу сольну творчість Гейлі", d: ["From Petals for Armor to the solo tour.", "Від Petals for Armor до сольного туру."], steps: [
-      ex("#hiatus", "The break and the solo albums", "Перерва й сольні альбоми"), ex("#s/simmer", "“Simmer”", "«Simmer»"), ex("#mv", "Music videos, solo ones included", "Кліпи, зокрема сольні"), ex("#e/ego-death-tour", "Ego Death at a Bachelorette Party and the tour", "Ego Death at a Bachelorette Party і тур"), ex("#m/hayley", "Hayley Williams, year by year", "Гейлі Вільямс рік за роком")] },
-    { en: "I like deep lore", ua: "Люблю глибоку лору", d: ["Rarities, rumours, old interviews and the long tail of the fandom.", "Раритети, чутки, старі інтерв'ю й довгий хвіст фандому."], steps: [
+    { en: "I want Hayley's solo work", ua: "Мене цікавить сольна Гейлі", d: ["From Petals for Armor to Ego Death and the solo tour.", "Від Petals for Armor до Ego Death і сольного туру."], steps: [
+      ex("#hiatus", "The break and the solo albums", "Перерва й сольні альбоми"), ex("#s/simmer", "“Simmer”", "«Simmer»"), ex("#mv", "Music videos, solo ones included", "Кліпи, зокрема сольні"), ex("#now", "Ego Death at a Bachelorette Party: the 20 songs", "Ego Death at a Bachelorette Party: 20 пісень"), ex("#e/ego-death-tour", "The solo tour", "Сольний тур"), ex("#m/hayley", "Hayley Williams, year by year", "Гейлі Вільямс рік за роком")] },
+    { en: "I like deep lore", ua: "Люблю копати глибоко", d: ["Rarities, rumours, old interviews and the long tail of the fandom.", "Раритети, чутки, старі інтерв'ю та довгий хвіст фандому."], steps: [
       ex("#iceberg", "The iceberg, entry by entry", "Айсберг, пункт за пунктом"), ex("#bsides", "B-sides and rarities", "B-сайди й раритети"), ex("#interviews", "Interviews in their own words", "Інтерв'ю їхніми словами"), ex("#videos", "Every video, searchable", "Усі відео з пошуком"), ex("#web", "On the web", "У мережі")] }
   ];
   window.startHere = () => {
     const opts = (() => { const g = {}; SONGS.forEach(s => (g[s.era + "|" + tx(s.album)] = g[s.era + "|" + tx(s.album)] || []).push(s)); return Object.keys(g).map(k => `<optgroup label="${e(k.split("|")[1])}">${g[k].map(s => `<option value="${s.id}">${e(s.title)}</option>`).join("")}</optgroup>`).join(""); })();
-    const pick = `<div class="path pick"><h3>${T("I know one song", "Я знаю одну пісню")}</h3><p>${T("Pick it. Its page links on to the album, the people, the videos and the tour.", "Обери її. Сторінка пісні веде далі: альбом, люди, відео й тур.")}</p>
+    const pick = `<div class="path pick"><h3>${T("I know one song", "Я знаю одну пісню")}</h3><p>${T("Pick it. Its page links on to the album, the people, the videos and the tour.", "Обери її — сторінка пісні веде далі: до альбому, людей, відео й туру.")}</p>
       <label class="sr" for="startsong">${T("Choose a song", "Обери пісню")}</label><select id="startsong"><option value="">${T("Choose a song…", "Обери пісню…")}</option>${opts}</select></div>`;
     const cards = PATHS.map(p => `<div class="path"><h3>${e(T(p.en, p.ua))}</h3><p>${e(T(p.d[0], p.d[1]))}</p><ol>${p.steps.filter(s => have(s.h)).map(s => `<li><a href="${s.h}">${e(T(s.en, s.ua))}</a></li>`).join("")}</ol></div>`).join("");
     return `<div class="paths">${pick}${cards}</div>`;

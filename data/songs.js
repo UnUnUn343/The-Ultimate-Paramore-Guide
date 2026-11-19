@@ -157,7 +157,7 @@ ERAS.forEach(e => {
   if (!P || !P.album) return;
   P.album.tracks.forEach((t, i) => {
     const title = t.t.split(" — ")[0], key = slug(title);
-    SONGS.push({ id: key.replace(/ /g, "-"), key, title, era: e.id, n: i + 1, album: t.t.includes(" — ") ? t.t.split(" — ")[1] : e.name, keySong: !!t.key, note: t.note, tag: i });
+    SONGS.push({ id: key.replace(/ /g, "-"), key, title, era: e.id, n: i + 1, album: t.t.includes(" — ") ? t.t.split(" — ")[1] : (P.album.albumName || e.name), keySong: !!t.key, note: t.note, tag: i });
   });
 });
 
@@ -177,7 +177,7 @@ window.SONG_VIDEOS = {
     { id: "rhjIiW8p0Bs", type: "clip", title: { en: "Future — Parahoy show #2, 7 March 2016 (fan footage)", ua: "Future — Parahoy, концерт №2, 7 березня 2016 (запис фана)" }, by: "wojo4hitz" }
   ]
 };
-SONGS.push({ id: "parachute", key: "parachute", title: "Parachute", era: "now", n: null, album: "Ego Death at a Bachelorette Party", keySong: true, note: null });
+
 
 
 window.SONGS_ERA = { id: "songs", accent: "#E87BAA", bg: "#150E13", hair: [], name: UI.songs, tab: UI.songs, years: "", font: { f: "'Oswald',Impact,sans-serif", tt: "uppercase", track: ".02em", fw: 600, h1s: 1 } };
