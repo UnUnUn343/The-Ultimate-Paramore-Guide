@@ -517,3 +517,25 @@ Object.assign(ICE_EXT, {
   "^Ticket Prices": [{ label: "TicketNews: Verified Fan failure and prices (2022)", url: "https://www.ticketnews.com/2022/07/paramore-fans-lash-out-over-verified-fan-failure-ticket-prices/" }, { label: "Stereogum: Hayley's plan against scalpers and bots", url: "https://stereogum.com/2478944/hayley-williams-announces-ticket-sales-plan-to-avoid-scalpers-bots/news" }, { label: "Exclaim!: Hayley on Ticketmaster", url: "https://exclaim.ca/music/article/paramores_hayley_williams_says_ticketmaster_needs_to_get_their_shit_together" },
     { note: "Coverage is about Verified Fan problems, resale prices far above face value, and Hayley criticising Ticketmaster from the stage in Cardiff (April 2023); no official face-value list was found." }]
 });
+// Round 8: the last 13 entries. Where nothing could be found the note says so rather than guessing.
+Object.assign(ICE_EXT, {
+  "^Fan accounts": [{ label: "Louder: Paramore wipe their social accounts (Dec 2023)", url: "https://www.loudersound.com/news/paramore-fans-have-questions-after-band-s-social-accounts-are-wiped-clean-and-website-is-pulled" }, { label: "Music Box: Paramore and fan communication", url: "https://themusicboxmedia.com/news-extras/paramores-influence-on-cultural-communication-in-music" },
+    { note: "No source names specific fan accounts. Press does describe the fan community (LiveJournal in the 2000s, the band's own fan club 2007–2013, today's Instagram and TikTok fan accounts) and how fans reacted when the band's accounts were wiped in December 2023." }],
+  "^Edibles": [{ note: "Searches of interviews with Hayley found nothing about this. Left as an unconfirmed fan item." }],
+  "^How-To Videos": [{ label: "MusicRadar: Misery Business snare sound", url: "https://www.musicradar.com/news/paramore-misery-business-snare-drum-sound-recreation-with-no-samples" }, { label: "Wonder How To: “My Heart” on acoustic guitar", url: "https://acoustic-guitar.wonderhowto.com/how-to/play-my-heart-by-paramore-acoustic-guitar-253169" },
+    { note: "No official how-to videos from the band were found. Third-party lessons exist (such as the “My Heart” tutorial), and MusicRadar covers how Zac's snare sound on “Misery Business” was made." }],
+  "^The Pressure Flip": [{ note: "Sources on the “Pressure” video (director Shane Drake, 2005) describe a couple stuck in jobs they dislike and a recurring pressure dial; none mentions a flip, so this stays unconfirmed. Watch the video to check." }],
+  "^Hayley wears glasses": [{ note: "No interview or article about this was found. Her only “glasses” in the press are figurative (talking about nostalgia through rose-tinted glasses), so the item stays unconfirmed." }],
+  "^Hayley - neck": [{ label: "Loudwire: Hayley says she headbanged the curvature out of her neck", url: "https://loudwire.com/paramore-hayley-williams-headbanged-curvature-out-of-my-neck/" },
+    { note: "Found: coverage of her neck pain from headbanging, and a band shirt that features X-rays of her neck. No source about a neck tattoo turned up, so that reading is not confirmed." }],
+  "^Standing Still During CCC": [{ note: "No review or report of this moment was found. Live reviews from the 2023 tour do not mention it, so it stays a fan-recalled item." }],
+  "^Note to Self": [{ label: "NME: Hayley shares a note written to her teenage self", url: "https://www.nme.com/en_asia/news/music/paramores-hayley-williams-shares-note-she-wrote-to-her-teenage-self-3427941" },
+    { note: "No Paramore song with this title was found. The closest match is a note Hayley wrote to her teenage self for a friend's newsletter and posted on Instagram Stories." }],
+  "^Taylor.s Anxiety": [{ note: "No interview in which Taylor talks about his own anxiety was found. Hayley has spoken about his support during hard periods, but that is her account, not his." }],
+  "^The End": [{ note: "Searches found no Paramore song or event with this name, so nothing is confirmed. Check which video or post the entry points to." }],
+  "^Brighter Meaning": [{ label: "Paramore Wiki: Brighter", url: "https://paramore.fandom.com/wiki/Brighter" },
+    { note: "The song is on All We Know Is Falling (2005), written by Hayley and Josh. The wiki gives a personal explanation, but it is not from an interview or official statement, so it is not repeated here." }],
+  "^Yard Sales": [{ label: "Gigwise: Paramore auction items for Japan relief", url: "https://www.gigwise.com/news/62252/Paramore-Auction-Off-Equipment-And-Clothes-For-Japan-Relief-Fund" }, { label: "Look to the Stars: Paramore launch a charity auction", url: "https://www.looktothestars.org/news/6055-paramore-launches-charity-auction-for-japan" },
+    { note: "Found: the “Paramore Yard Sale”, an eBay auction of clothes, accessories and gear in March–April 2011, with proceeds going to the Red Cross after the Japan earthquake and tsunami. Reports differ on the item count (30 or more than 60); the final total was not found." }],
+  "^Anne$": [{ note: "Searches found no Paramore song, person or fan theory with this name, so nothing is confirmed." }]
+});
