@@ -9,7 +9,7 @@ Object.assign(UI, {
   meaningHint: { ua: "наведи або натисни на частину — з'явиться пояснення", en: "hover or tap a part to read it" },
   behind: { ua: "Історія пісні", en: "Behind the song" },
   lyricsTitle: { ua: "Тексти", en: "The lyrics" },
-  lyricsBody: { ua: "Тексти пісень захищені авторським правом, тому їх тут немає. Genius має сторінку цієї пісні: текст, довідку про пісню й анотації до рядків, які пишуть його учасники (під кожною анотацією видно авторів). Ми їх не копіюємо й не вбудовуємо, а лише посилаємося; тут — пояснення, написані для цього гіда.", en: "Lyrics are copyrighted, so they aren't here. Genius has a page for this song with the lyrics, a song bio and line-by-line annotations written by its contributors (each annotation lists who wrote it). We don't copy or embed any of it, we only link to it; what you read here is written for this guide." },
+  lyricsBody: { ua: "Тексти пісень захищені авторським правом, тому їх тут немає. Genius має сторінку цієї пісні: текст, довідку про пісню й анотації до рядків, які пишуть його учасники (під кожною анотацією видно авторів). Їх не копіюють і не вбудовують, а лише дають посилання; тут — пояснення, написані для цього гіда.", en: "Lyrics are copyrighted, so they aren't here. Genius has a page for this song with the lyrics, a song bio and line-by-line annotations written by its contributors (each annotation lists who wrote it). None of it is copied or embedded here, only linked to; what you read here is written for this guide." },
   readGenius: { ua: "Genius: текст, довідка й анотації", en: "Genius: lyrics, song bio & annotations" },
   jumpTo: { ua: "Перейти до моменту", en: "Jump to the moment" },
   nextSong: { ua: "Наступна", en: "Next song" },

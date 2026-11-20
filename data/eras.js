@@ -173,7 +173,7 @@ const HAIR = {
     { c: "#FF7A1A", c2: "#2F7FD1", ua: "помаранчеве з блакитним", en: "orange with blue added", w: "2014", s: T("blue hair at Reading Festival 2014 — her own favourite", "синє волосся на Reading 2014 — її улюблене") }
   ],
   crisis: [
-    { c: "#FF7A1A", ua: "помаранчевий «Riot» — один із перших відтінків Good Dye Young", en: "the orange “Riot” — one of Good Dye Young's first shades", w: "2016", s: T("a product launch, not a look we can pin to a date on her", "це запуск продукту, а не конкретний образ Гейлі") }
+    { c: "#FF7A1A", ua: "помаранчевий «Riot» — один із перших відтінків Good Dye Young", en: "the orange “Riot” — one of Good Dye Young's first shades", w: "2016", s: T("a product launch, not a look that can be pinned to a date on her", "це запуск продукту, а не конкретний образ Гейлі") }
   ],
   al: [
     { c: "#EDEBE4", ua: "біле / платинове", en: "white / platinum blonde", w: "2017", s: T("her stylist describes going blonde as a way to “take back power”", "стиліст називає це способом «повернути собі силу»") },
@@ -214,7 +214,7 @@ hs("awkif", 0, { r: ["2005", "2006"], ap: 1, p: ["hayley06"] }); hs("awkif", 1, 
 hs("riot", 0, { r: ["2006", "2008"], ap: 1, p: ["hayleyStage", "hayley08"] }); hs("riot", 1, { r: ["2007", "2008"], ap: 1 }); hs("riot", 2, { r: ["2008", "2008"] });
 HAIR.riot.push({ c: "#E9CF6B", ua: "світлий блонд", en: "light blonde", w: T("photos from Nov 2006 and Aug 2007", "фото листопада 2006 і серпня 2007"), r: ["2006", "2007"], ap: 1, p: ["hayleyNov06", "hayley07"], s: T("visible in the photos next to the orange — probably lighter or faded stretches", "видно на фото поряд із помаранчевим — імовірно, світліші або вигорілі періоди") });
 hs("bne", 0, { r: ["2009", "2010"], ap: 1 }); hs("bne", 1, { r: ["2010", "2010"] });
-HAIR.trio.push({ c: "#F0541E", ua: "яскраво-помаранчево-руде", en: "bright orange-red", w: T("March 2011 photo", "фото березня 2011"), r: ["2011", "2011"], p: ["hayley11"], s: T("seen at the Bogotá show — the earliest post-Farro look we can document", "видно на концерті в Боготі — найраніший образ після братів Фарро, який вдається підтвердити") });
+HAIR.trio.push({ c: "#F0541E", ua: "яскраво-помаранчево-руде", en: "bright orange-red", w: T("March 2011 photo", "фото березня 2011"), r: ["2011", "2011"], p: ["hayley11"], s: T("seen at the Bogotá show — the earliest documented post-Farro look", "видно на концерті в Боготі — найраніший образ після братів Фарро, який вдається підтвердити") });
 hs("paramore", 0, { r: ["2013", "2013"] }); hs("paramore", 1, { r: ["2013", "2014"], ap: 1 }); hs("paramore", 2, { r: ["2013", "2013"], ap: 1 }); hs("paramore", 3, { r: ["2014", "2014"] });
 HAIR.paramore.push({ c: "#3CC8C0", ua: "бірюзове", en: "turquoise / teal", w: T("Aug 2014 · Monumentour", "серп. 2014 · Monumentour"), r: ["2014", "2014"], p: ["hayley14"], s: T("what the tour photo shows", "те, що видно на фото з туру") });
 hs("crisis", 0, { r: ["2016", "2016"] });

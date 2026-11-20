@@ -65,7 +65,7 @@ POSTS.push(
   { platform: "press", era: "paramore", iso: "2023-04-05", date: "5 Apr 2023", by: "Hayley Williams · social media", url: "https://stereogum.com/2219396/hayley-williams-shares-statement-for-todays-10th-anniversary-of-paramores-self-titled-album/news",
     cap: { ua: "10 років альбому Paramore", en: "Ten years of the self-titled album" },
     text: { ua: "Гейлі пише, що альбом потребував «багато сміливості й самовизначення», і що історія гурту сповнена драми, як у реаліті-шоу.", en: "Hayley writes that the record took “a lot of guts and self-determination” and that the band's story has been full of reality-show style drama." } },
-  { platform: "press", era: "tiw", iso: "2023-04-09", date: "9 Apr 2023", by: "Hayley Williams · Instagram Story", url: "https://www.nme.com/en_asia/news/music/paramores-hayley-williams-shares-note-she-wrote-to-her-teenage-self-3427941",
+  { platform: "press", era: "tiw", iso: "2023-04-09", date: "9 Apr 2023", by: "Hayley Williams · Instagram Story", url: "https://www.nme.com/news/music/paramores-hayley-williams-shares-note-she-wrote-to-her-teenage-self-3427860",
     cap: { ua: "Записка собі-підлітку", en: "A note to her teenage self" },
     text: { ua: "Записка, написана для розсилки подруги: Гейлі порадила б собі-підлітку засвоїти, що життя — це «і те, і те».", en: "A note written for a friend's newsletter: Hayley would tell her teenage self to learn that life is “both/and”." } },
   { platform: "press", era: "tiw", iso: "2023-12-26", date: "26 Dec 2023", by: "Paramore · Instagram, X and paramore.net", url: "https://loudersound.com/news/paramore-fans-have-questions-after-bands-social-accounts-are-wiped-clean-and-website-is-pulled",

@@ -2,7 +2,7 @@
 // this page reads the data files themselves, so it is always up to date, and adds the iceberg research notes from ICE_EXT.
 Object.assign(UI, {
   sources: { ua: "Джерела й примітки", en: "Sources & notes" },
-  sourcesTag: { ua: "звідки що взято і наскільки це певно", en: "where things come from, and how sure we are" },
+  sourcesTag: { ua: "звідки що взято і наскільки це певно", en: "where things come from, and how certain they are" },
   sourcesQuote: { ua: "У текстах стоять лише маленькі ⓘ — тут усі примітки разом.", en: "The pages carry only a small ⓘ — here are all the notes together." },
   sourcesIntro: { ua: "Тут зібрано, що не вдалося перевірити, де лише одне джерело, де розповідь учасників, а де фанатська версія. Позначки ⓘ у текстах ведуть сюди за змістом.", en: "This is where the things that couldn't be checked live: single sources, band members' own tellings, fan versions and unverified dates. The ⓘ marks in the pages point here." },
   sourcesIce: { ua: "Айсберг — нотатки з пошуків", en: "Iceberg — research notes" },

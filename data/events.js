@@ -126,6 +126,6 @@ Object.assign(UI, { source: { ua: "Джерело", en: "Source" } });
 window.HOME_ERA = { id: "home", accent: "#FF7A1A", bg: "#120E16", hair: [], name: UI.site, tab: UI.site, years: "",
   font: { f: "'Oswald',Impact,sans-serif", tt: "uppercase", track: ".02em", fw: 600, h1s: 1.15 } };
 
-Object.assign(UI, { photos: { ua: "Фото", en: "Photos" }, photosQuote: { ua: "Усі вільноліцензійні фото гурту, які вдалося знайти — з указаним автором.", en: "Every freely licensed photo of the band we could find — each credited to its photographer." }, candid: { ua: "Жартівливі й невимушені (за ключовими словами в описах)", en: "Candid & silly (by keywords in captions)" } });
+Object.assign(UI, { photos: { ua: "Фото", en: "Photos" }, photosQuote: { ua: "Усі вільноліцензійні фото гурту, які вдалося знайти — з указаним автором.", en: "Every freely licensed photo of the band that could be found — each credited to its photographer." }, candid: { ua: "Жартівливі й невимушені (за ключовими словами в описах)", en: "Candid & silly (by keywords in captions)" } });
 window.PHOTOS_ERA = { id: "photos", accent: "#4FB3D9", bg: "#0E1418", hair: [], name: UI.photos, tab: UI.photos, years: "", font: { f: "'Oswald',Impact,sans-serif", tt: "uppercase", track: ".02em", fw: 600, h1s: 1 } };
 
